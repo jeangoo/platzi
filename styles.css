@@ -30,3 +30,19 @@ body {
     height: 100px;
     background-color: yellow;
 }
+
+.relative {
+    margin-top: 20px;
+    height: 400px;
+    width: 400px;
+    background-color: crimson;
+    position: relative;
+}
+
+.absolute {
+    height: 200px;
+    width: 200px;
+    background-color: darkred;
+    position: absolute;
+    right: 0;
+}
