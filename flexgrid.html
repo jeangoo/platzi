@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        header {
+            padding: 1rem;
+            height: 60px;
+            background-color: #333;
+               
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+
+        aside {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            height: 86vh;
+        }
+        .mainContent {
+            margin: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .card {
+            box-sizing: border-box;
+            height: 400px;
+            width: 300px;
+            background-color: lightslategray;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 20px 0 20px 0;
+        }
+
+        .info p {
+            margin-bottom: 20px;
+        }
+
+        .info a {
+            margin: 0 30px 0 0;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #333;
+            box-sizing: border-box;
+            padding: 1rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer h2 {
+            margin-left: 360px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: white;
+            margin-left: 15px;
+        }
+
+        @media (max-width: 1000px) {
+            main {
+                display: block;
+            }
+            .mainContent {
+            margin: 20px;
+            gap: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        aside {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            height: auto;
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>FlexGrid</h1>
+            <ul>
+                <li>Inicio</li>
+                <li>Servicios</li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h1>aside</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure eaque nobis, soluta excepturi necessitatibus porro aliquam amet ab praesentium quisquam iste officiis illum provident! Obcaecati ipsam doloribus atque. Eveniet, esse.</p><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis amet tempora nisi explicabo temporibus officia laboriosam, nemo fuga quisquam necessitatibus exercitationem eum minus id rem reprehenderit delectus debitis. Voluptatem, recusandae?</p><br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ab id tempora ipsam corporis in error ducimus, neque itaque sequi minima repudiandae necessitatibus laborum maxime explicabo pariatur mollitia? Repudiandae, vero.</p><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, voluptatem! Nemo, maiores. Porro nesciunt recusandae incidunt ipsam et quisquam. Consequuntur atque necessitatibus minima labore et sunt ipsum sapiente quae similique.</p>
+        </aside>
+        <section class="mainContent">
+            <article class="card">
+                <h1>Title card</h1>
+                <img src="https://raw.githubusercontent.com/bestofjs/bestofjs-webui/8665e8c267a0215f3159df28b33c365198101df5/public/logos/realm.svg" alt="">
+                <div class="info">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius voluptatum omnis officiis molestiae doloribus earum possimus molestias maiores quisquam fugit, blanditiis rem, esse magni sunt aut odio hic qui nihil?</p>
+                    <a href="">github</a>
+                    <a href="">contacto</a>
+                </div>
+            </article>
+            <article class="card">
+                <h1>Title card</h1>
+                <img src="https://raw.githubusercontent.com/bestofjs/bestofjs-webui/8665e8c267a0215f3159df28b33c365198101df5/public/logos/realm.svg" alt="">
+                <div class="info">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius voluptatum omnis officiis molestiae doloribus earum possimus molestias maiores quisquam fugit, blanditiis rem, esse magni sunt aut odio hic qui nihil?</p>
+                    <a href="">github</a>
+                    <a href="">contacto</a>
+                </div>
+            </article>
+            <article class="card">
+                <h1>Title card</h1>
+                <img src="https://raw.githubusercontent.com/bestofjs/bestofjs-webui/8665e8c267a0215f3159df28b33c365198101df5/public/logos/realm.svg" alt="">
+                <div class="info">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius voluptatum omnis officiis molestiae doloribus earum possimus molestias maiores quisquam fugit, blanditiis rem, esse magni sunt aut odio hic qui nihil?</p>
+                    <a href="">github</a>
+                    <a href="">contacto</a>
+                </div>
+            </article>
+        </section>
+        
+    </main>
+    <footer>
+        <div>
+        <h2>@copyright</h2>
+        </div>
+        <div>
+        <a href="">instagram</a>
+        <a href="">twitter</a>
+        <a href="">correo</a>
+        </div>
+    </footer>
+</body>
+</html>
