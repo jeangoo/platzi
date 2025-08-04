@@ -1,31 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'geist', sans-serif;
+    font-family: 'Geist', sans-serif;
 }
 
 body {
-   background: linear-gradient(to bottom, #0f1b30, #0f162d, #071226); 
-   color: #f0f0f0;
+    background: linear-gradient(to bottom, #0f1b30, #0f162d, #071226); 
+    color: #f0f0f0;
 }
 
-main {
-    margin: 150px 336px 50px 336px;
-}
-
-strong {
+strong, #skill, nav ul li a:hover {
     color: oklch(63.7% 0.237 260);
 }
 
-@media (width > 1600px) {
-    main {
-         margin: 150px 636px 50px 636px;
-    }
+/* Layout & Structure */
 
-    header nav {
-        margin: 0 736px 0 736px;
-    }
+main {
+    margin: 150px 336px 50px 336px;
 }
 
 header {
@@ -52,15 +45,9 @@ header nav ul {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
-#skill {
-    color: oklch(63.7% 0.237 260);
+header nav ul li {
+    list-style: none;
 }
-
-header nav ul li a:hover {
-    transition: 0.3s;
-    color: oklch(63.7% 0.237 260);
-}
-
 
 header nav ul li a {
     text-decoration: none;
@@ -68,13 +55,11 @@ header nav ul li a {
     color: #0f1b30;
 }
 
-header nav ul li {
-    list-style: none;
-}
+/* Hero */
 
 .hero {
-   display: grid;
-   grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .hero h1 {
@@ -84,6 +69,7 @@ header nav ul li {
 }
 
 .hero p {
+    width: 800px;
     margin-top: 6px;
     font-size: 1.1rem;
     color: #dddddd;
@@ -133,6 +119,8 @@ header nav ul li {
     scale: 1.02;
 }
 
+/* Skills */
+
 .skills {
     margin-top: 100px;
 }
@@ -146,6 +134,7 @@ header nav ul li {
     display: flex;
     margin-top: 16px;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .skills .card {
@@ -158,6 +147,8 @@ header nav ul li {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     color: #0f1b30;
 }
+
+/* Projects */
 
 .projectsSection {
     margin-top: 100px;
@@ -182,6 +173,7 @@ header nav ul li {
     height: 300px;
     padding: 1.5rem;
     color: #0f1b30;
+    width: 100%;
 }
 
 .project h3 {
@@ -212,11 +204,14 @@ header nav ul li {
     object-fit: cover;
 }
 
+/* About */
+
 .about {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-right: 20px;
 }
 
 .about h1 {
@@ -229,7 +224,7 @@ header nav ul li {
 }
 
 .about .aboutMe p {
-    width: 600px;
+    width: 640px;
     font-size: 1.1rem;
     color: #cccccc;
 }
@@ -239,7 +234,10 @@ header nav ul li {
     height: 200px;
     border-radius: 5%;
     float: right;
+    margin-bottom: 10px;
 }
+
+/* Footer */
 
 footer {
     display: flex;
@@ -250,9 +248,9 @@ footer {
 }
 
 footer a {
-     text-decoration: none;
-     color: #cccccc;
-     margin-right: 16px;
+    text-decoration: none;
+    color: #cccccc;
+    margin-right: 16px;
 }
 
 footer a:hover {
@@ -262,4 +260,87 @@ footer a:hover {
 footer .ancords {
     display: flex;
     gap: 16px;
+}
+
+/* Media Queries */
+
+@media (width > 1600px) {
+    main {
+        margin: 150px 636px 50px 636px;
+    }
+
+    header nav {
+        margin: 0 736px 0 736px;
+    }
+}
+
+@media (width < 1000px) {
+    header {
+        margin: 0 -50px 0 -300px;
+    }
+
+    main {
+        margin: 150px 20px 50px 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        width: 850px;
+    }
+
+    .hero p {
+        width: 850px;
+    }
+
+    .about .aboutMe p {
+        width: 500px;
+    }
+}
+
+@media (width < 800px) {
+    header {
+        margin: 0 -50px 0 -400px;
+    }
+
+    .project {
+        width: 700px;
+    }
+
+    .hero p {
+        width: 700px;
+    }
+
+    .about .aboutMe p {
+        width: 500px;
+    }
+}
+
+@media (width < 500px) {
+    header {
+        margin: 0 -50px 0 -440px;
+    }
+
+    main {
+        margin: 150px 20px 50px 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        width: 600px;
+    }
+
+    .hero p {
+        width: 605px;
+    }
+
+    .about .aboutMe p {
+        width: 600px;
+    }
+
+    footer .ancords {
+        display: flex;
+        gap: 10px;
+    }
 }
