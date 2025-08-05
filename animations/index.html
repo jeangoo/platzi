@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: lightseagreen;
+        }
+
+        div:nth-child(2) {
+            width: 100px;height: 100px;
+            background-color: lightsalmon;
+            margin-top: 10px;
+        }
+
+        div:nth-child(2):hover {
+            transform: scale(2);
+        }
+
+        div:nth-child(3) {
+            width: 100px;height: 100px;
+            background-color: lightgreen;
+            margin-top: 10px;
+        }
+
+        div:nth-child(3):hover {
+            transform: rotate(45deg);
+        }
+
+        div:hover {
+            transform: translate(50px, 50px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    
+</body>
+</html>
