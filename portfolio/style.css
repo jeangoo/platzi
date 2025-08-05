@@ -227,6 +227,7 @@ header nav ul li a {
     width: 640px;
     font-size: 1.1rem;
     color: #cccccc;
+    margin: 1px;
 }
 
 .about .aboutMe img {
@@ -272,6 +273,14 @@ footer .ancords {
     header nav {
         margin: 0 736px 0 736px;
     }
+
+    .hero p {
+        width: 630px;
+    }
+
+    .project {
+        width: 630px;
+    } 
 }
 
 @media (width < 1000px) {
