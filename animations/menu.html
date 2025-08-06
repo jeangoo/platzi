@@ -8,11 +8,23 @@
         * {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.1rem;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #90f;
+        }
+        
+        header {
+            height: 100px;
+            background: #09f;
+            padding: 1rem   ;
         }
 
         ul {
             list-style: none;
+            padding: 5px;
+            margin: 0;
         }
 
         a {
@@ -24,34 +36,42 @@
             display: block;
             opacity: 0;
             position: absolute;
-            transition: 250ms;
+            transition: 250ms ease;
+            z-index: 1000;
         }
 
         .nav {
-            margin: 15px 5px auto 15px;
             display: flex;
-            justify-content: space-evenly;
-            gap: 10px;
+            justify-content: center;
+            gap: 30px;
         }
 
         .nav li:hover > ul {
             transition: 250ms;
             opacity: 1;
+            background-color: white;
+            height: auto;
+            width: fit-content;
         }
 
         .nav li ul li {
             position: relative;
-            right: -30px;
         }
 
-        .nav li ul li:hover {
-            border-bottom: 2px solid black;
+        .nav li ul li a {
+            display: block;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav li ul li a:hover {
+            background: #eee;
         }
 
     
     </style>
 </head>
 <body>
+    <header>
     <ul class="nav">
    <li><a href="#">Men</a>
       <ul>
@@ -119,6 +139,7 @@
       </ul>
    </li>
 </ul>
+</header>
 
 </body>
 </html>
