@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      font-family: sans-serif;
+      box-sizing: border-box;
+    }
+
+    header {
+      padding: 1rem;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    nav ul li a:hover {
+      color: #f09;
+      transition: 1s;
+    }
+
+    body {
+      display: grid;
+      grid-template-rows: 70px 1fr 100px;
+      min-height: 100vh;
+    }
+    header {
+      background: #09f;
+    }
+
+    main {
+      background: #90f;
+    }
+
+    footer {
+      background: #f09;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    main p {
+      margin-top: 10px;
+      max-width: 400px;
+    }
+
+    main img {
+      height: 300px;
+      position: absolute;
+      top: 50px;
+      left: 400px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    footer .socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    footer .socials a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    footer .socials a:hover {
+      transition: 1s;
+      color: #09f;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Pancake</h1>
+    <ul>
+      <li><a href="">syrup</a></li>
+      <li><a href="">mantequilla</a></li>
+      <li><a href="">nutella</a></li>
+    </ul>
+  </nav>
+</header>
+  <main><h1>Hero</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora inventore, error laborum sapiente odio corrupti iste autem. Animi aliquid ipsa eligendi esse tempora doloribus voluptatibus voluptatem sit, culpa provident sed.</p>
+    <img src="https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-stack-of-pancake-clipart-cartoon-pancake-cartoon-illustrations-vector-png-image_6870683.png" alt="">
+  
+  </main>
+  <footer>
+    <div><h1>Copyright</h1></div>
+    <div class="socials">
+      <a href="">github</a>
+      <a href="">email</a>
+      <a href="">instagram</a>
+    </div>
+  </footer>
+</body>
+</html>

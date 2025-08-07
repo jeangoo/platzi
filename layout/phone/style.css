@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.phone {
+  margin-top: 15px;
+  position: relative;
+  border: 8px solid #8E7DBE; /* Lavanda suave */
+  height: 600px;
+  border-radius: 40px;
+  width: 300px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+  background: white;
+  overflow: hidden;
+}
+
+.phone header {
+  position: absolute;
+  height: 130px;
+  width: 100%;
+  background: #F7CFD8; 
+}
+
+.phone header h1 {
+  margin-top: 10px;
+  font-size: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   color: #8E7DBE;
+}
+
+.phone header input {
+  background-color: white;
+  border: none;
+  display: flex;
+  margin-top: 30px;
+  height: 40px;
+  width: 260px;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.phone header input::placeholder {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.phone main {
+  position: absolute;
+  margin-top: 140px;
+}
+
+.phone main .info {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+  align-items: center;
+}
+
+.phone main .info h3 {
+  color: #8E7DBE; /* Lavanda suave */
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.phone main .info h2 {
+  font-size: 1.2rem;
+}
+
+.phone main .popular {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 9px 20px 20px 20px;
+  gap: 10px;
+}
+
+.phone main .popular .card {
+  padding: 1rem;
+  height: 110px;
+  width: 110px;
+  border-radius: 14px;
+  border: 1px solid #F4F8D3; /* Amarillo pálido */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone main .popular .card span {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.phone main .popular .card p {
+  color: gray;
+}
+
+.phone footer {
+  background: #F7CFD8;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.phone footer .user {
+  position: absolute;
+  right: 20px;
+  height: 30px;
+}
+
+.phone footer .settings {
+  position: absolute;
+  left: 20px;
+  height: 30px;
+}
