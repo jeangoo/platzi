@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            counter-reset: score;
+        }
+        .phone {
+            position: relative;
+            border: 8px solid black;
+            height: 600px;
+            border-radius: 40px;
+            width: 300px;
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+            background: #2980B9;
+            background: linear-gradient(
+            to bottom,
+            #2980B9,#6DD5FA,#FFFFFF);
+            overflow: hidden;
+        }
+
+        .layer-1 {
+            position: absolute;
+            z-index: 1;
+            height: 450px;
+            width: 80px;
+            background: #8B5A2B;
+            bottom: 0;
+            right: 60px;
+            border-radius: 30px;
+             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+
+             animation: layer 1.2s ease-in-out infinite;
+
+        }
+
+        @keyframes layer {
+            0% {
+                bottom: 0;
+            }
+
+            50% {
+                bottom: -55px;
+            }
+
+            100% {
+                bottom: 0;
+            }
+        }
+
+        input[type=checkbox] {
+        position: absolute;
+        appearance: none;
+        cursor: pointer;
+        z-index: 1;
+        width: 100%;
+        height: 80px;
+        }
+
+        input:checked {
+            counter-increment: score;
+        }
+
+
+
+        .layer-2 {
+            position: absolute;
+            z-index: 2;
+            height: 450px;
+            width: 80px;
+            background: #8B5A2B;
+            bottom: 0;
+            left: 60px;
+            border-radius: 30px;
+             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+              animation: layer 1.7s ease-in-out infinite;
+
+        }
+        .layer-3 {
+            position: absolute;
+             z-index: 3;
+             left: 0;
+             right: 0;
+             margin: 0 auto;
+             width: 200px;
+             height: 400px;
+             /* background:   sienna; */
+            background: linear-gradient(0deg,rgba(160, 82, 45, 1) 72%, rgba(122, 199, 76, 1) 100%);
+             bottom: -12px;
+             border-top: 12px solid #7AC74C;
+             border-radius: 12px;
+             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+        }
+        .layer-4 {
+            position: absolute;
+             z-index: 4;
+             height: 320px;
+            width: 80px;
+            background: #8B5A2B;
+            bottom: 0;
+            left: 30px;
+            border-radius: 30px;
+             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+              animation: layer 950ms ease-in-out infinite;
+        }
+        .layer-5 {
+            position: absolute;
+             z-index: 5;
+             margin: 0 auto;
+             left: -150px;
+             right: 0;
+             width: 180px;
+             height: 270px;
+             /* background: sienna; */
+             background: linear-gradient(0deg,rgba(160, 82, 45, 1) 72%, rgba(122, 199, 76, 1) 100%);
+             bottom: 0;
+             border-top: 12px solid #7AC74C;
+             border-radius: 12px;
+             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+        }
+        .layer-6 {
+            position: absolute;
+             z-index: 6;
+            height: 270px;
+            width: 80px;
+            background: #8B5A2B;
+            bottom: -12px;
+            right: 30px;
+            border-radius: 30px;
+             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+              animation: layer 1s ease-in-out infinite;
+           
+        }
+        .layer-7 {
+            position: absolute;
+             z-index: 7;
+             right: -20px;
+             width: 180px;
+             height: 215px;
+             /* background: sienna; */
+             background: linear-gradient(0deg,rgba(160, 82, 45, 1) 72%, rgba(122, 199, 76, 1) 100%);
+             bottom: -12px;
+             border-top: 12px solid #7AC74C;
+             border-radius: 12px;
+             box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+        }
+        .layer-8 {
+            position: absolute;
+             z-index: 8;
+             height: 140px;
+             width: 120px;
+             /* background: #7AC74C; */
+             background: linear-gradient(0deg,rgba(22, 166, 29, 1) 69%, rgba(84, 168, 35, 1) 87%);
+             bottom: -15px;
+             border-radius: 20px;
+             margin: 0 auto;
+              box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+        }
+        .layer-9 {
+            position: absolute;
+             z-index: 9;
+             height: 125px;
+             width: 98px;
+             /* background: #508034; */
+             background: linear-gradient(0deg,rgba(30, 143, 62, 1) 72%, rgba(84, 168, 35, 1) 100%);
+             bottom: -20px;
+             border-radius: 20px;
+             margin: 0 auto;
+             right: 0;
+              box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+        }
+        .layer-10 {
+            position: absolute;
+            z-index: 10;
+            height: 150px;
+             width: 122px;
+             /* background: #7AC74C; */
+             background: linear-gradient(0deg,rgba(45, 168, 80, 1) 48%, rgba(84, 168, 35, 1) 81%);
+             bottom: -30px;
+             border-radius: 30px;
+             margin: 0 auto;
+             left: 50px;
+             right: 50px;
+              box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+        }
+
+        .nose {
+            position: absolute;
+            height: 10px;
+            width: 20px;
+            background: 	#E07070;
+            border-radius: 50%;
+            left: 30px;
+            top: 30px;
+        }
+
+        .lefteye {
+            position: absolute;
+            height: 20px;
+            width: 6px;
+            background: black;
+            border-radius: 50%;
+            bottom: 10px;
+            left: -4px;
+            animation: blink 2s infinite;
+        }
+
+    
+        .righteye {
+            position: absolute;
+            height: 20px;
+            width: 6px;
+            background: black;
+            border-radius: 50%;
+            bottom: 10px;
+            right: -4px;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                height: 20px;
+            }
+
+            5% {
+                transform: translate(0px, 2px);
+                height: 9px;
+            }
+
+            7% {
+                height: 4px;
+            }
+
+            10% {
+                transform: translate(0px, 0px);
+                height: 20px;
+            }
+        }
+
+
+        #shiny .nose {
+            position: absolute;
+            height: 10px;
+            width: 20px;
+            background: #87CEFA;
+            border-radius: 50%;
+            left: 30px;
+            top: 30px;
+        }
+
+        .title {
+            font-family: onest, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            font-size: 1.6rem;
+            z-index: 15;
+        }
+
+        .logo {
+            position: absolute;
+            top: 55px;
+            height: 90px;
+            width: auto;
+            right: 32px;
+        }
+
+        .potion {
+            position: absolute;
+            width: 50px;
+            left: 4px;
+            bottom: 0;
+            transform: rotate(90deg);
+        }
+
+        .ball {
+            position: absolute;
+            width: 50px;
+            bottom: 15px;
+            transform: rotate(20deg);
+        }
+
+        .berry {
+            position: absolute;
+            width: 50px;
+            top: 0;
+            transform: rotate(330deg);
+        }
+
+        .berryl8 {
+            position: absolute;
+            width: 50px;
+            bottom: 0;
+            left: 50px;
+            transform: rotate(330deg);
+        }
+
+        .score {
+            font-family: onest, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+        }
+
+        .score::after {
+            content: counter(score);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="phone">
+        <h1 class="title">Click the Digglet🎯</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="pokemon logo" class="logo">
+        <div class="layer-1" id="shiny"><input type="checkbox"><div class="nose"><div class="lefteye"></div><div class="righteye"></div></div></div>
+        <div class="layer-2"><input type="checkbox"><div class="nose"><div class="lefteye"></div><div class="righteye"></div></div></div>
+        <div class="layer-3"></div>
+        <div class="layer-4"><input type="checkbox"><div class="nose"><div class="lefteye"></div><div class="righteye"></div></div></div>
+        <div class="layer-5"></div>
+        <div class="layer-6"><input type="checkbox"><div class="nose"><div class="lefteye"></div><div class="righteye"></div></div></div>
+        <div class="layer-7"></div>
+        <div class="layer-8"><img src="https://images.wikidexcdn.net/mwuploads/wikidex/f/fd/latest/20230115173615/Poci%C3%B3n_EP.png" alt="" class="potion"><img src="https://images.wikidexcdn.net/mwuploads/wikidex/7/7a/latest/20230621214046/Baya_Meloc_EP.png" alt="" class="berryl8"></div>
+        <div class="layer-9"><img src="https://images.wikidexcdn.net/mwuploads/wikidex/2/23/latest/20230919192021/Baya_Oram_EP.png" alt="" class="berry"></div>
+        <div class="layer-10"><img src="https://archives.bulbagarden.net/media/upload/b/b3/Pok%C3%A9_Ball_ZA_Art.png" alt="" class="ball"><h3 class="score">Score: </h3></div>
+    </div>
+</body>
+</html>
