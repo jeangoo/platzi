@@ -54,15 +54,17 @@ header .login-buttons a:first-child {
 
 header .login-buttons a:nth-child(2) {
   font-weight: bold;
-  color: salmon;
-  border: 2px solid salmon;
+  color: rgb(61, 117, 221);
+  border: 2px solid rgb(61, 117, 221);
+  /* color: salmon;
+  border: 2px solid salmon; */
   padding: 1rem;
   border-radius: 16px;
 }
 
 header .login-buttons a:nth-child(2):hover {
   color: white;
-  background: salmon;
+  background: rgb(61, 117, 221);
 }
 
 main {
@@ -222,12 +224,6 @@ footer .socials a {
   text-decoration: none;
   color: black;
   font-size: 1.1rem;
-  transition: 450ms;
-}
-
-footer .socials a:hover {
-  transition: 450ms;
-  color: orange;
 }
 
 @media (width < 801px) {
