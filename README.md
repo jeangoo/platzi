@@ -24,3 +24,5 @@ tecnologias
 
 - html
 - css
+
+- > Made for learning purposes only.
