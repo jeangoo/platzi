@@ -243,6 +243,12 @@
   .w-xl {
     width: var(--container-xl);
   }
+  .max-w-xl {
+    max-width: var(--container-xl);
+  }
+  .min-w-xl {
+    min-width: var(--container-xl);
+  }
   .border-collapse {
     border-collapse: collapse;
   }
