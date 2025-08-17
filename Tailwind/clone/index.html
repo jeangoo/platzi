@@ -3,28 +3,172 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Platzi clone</title>
+  <title>airbnb</title>
   <link rel="stylesheet" href="./src/output.css">
 </head>
-<body class="bg-zinc-700">
-  <header class="bg-gray-900 h-auto p-4 my-2 mx-4 rounded-xl">
-    <nav class="flex gap-2 justify-between items-center">
-      <img src="https://balticanebula.com/content/images/2023/06/plus-tailwind.jpg" alt="" class="rounded-full size-14 object-cover border-3 border-green-700">
-      <div class="flex flex-col">
-        <p class="text-zinc-600 font-semibold">Clase 18 de 19 • Curso de TailwindCSS</p>
-        <h2 class="text-white text-lg font-semibold">Integración de Tailwind CSS con Next.js y Astro</h2>
+<body>
+  <header class="p-4 bg-blue-50">
+    <nav class="flex justify-between items-center flex-wrap">
+      <h2 class="text-xl font-extrabold text-blue-600">Airbnb</h2>
+      <ul class="flex gap-4 text-lg text-gray-700">
+        <li><a href="" class="hover:text-blue-500 transition duration-150 ease-in-out">🏠Alojamientos</a></li>
+        <li><a href=""  class="hover:text-blue-500 transition duration-150 ease-in-out">🚀Experiencias</a></li>
+        <li><a href=""  class="hover:text-blue-500 transition duration-150 ease-in-out">🛎️Servicios</a></li>
+      </ul>
+      <div class="flex gap-4 items-center">
+        <a href="" class="font-bold hover:bg-blue-100 text-gray-700 transition duration-300 ease-in-out p-2 rounded-xl">Conviértete en anfitrión</a>
+        <span class="bg-blue-100 p-2 rounded-full size-10"><img src="assets/world-svgrepo-com.svg" alt="" class="hover:scale-130 transition duration-150 ease-in-out"></span>
+        <span class="bg-blue-100 p-2 rounded-full size-10"><img src="assets/menu-svgrepo-com.svg" alt="" class="hover:scale-130 transition duration-150 ease-in-out"></span>
       </div>
-        <ul class="flex gap-2 items-center">
-          <li><a href="" class="bg-zinc-500 rounded-xl p-2 text-white font-semibold">⬅️ Clase anterior</a></li>
-          <li><a href="" class="bg-zinc-500 rounded-xl p-2 text-white font-semibold">Ver clases</a></li>
-          <li><a href="" class="bg-white rounded-xl p-2 font-semibold">Siguiente clase ➡️</a></li>
-        </ul>
     </nav>
-  </header>
-  <section class="grid grid-cols-3 mx-4 my-4 gap-4">
-    <article class="bg-black w-auto col-span-2 h-100 rounded-xl">
+    <article class="bg-white p-2 border-2 border-blue-200 rounded-xl flex justify-between items-center mt-8 shadow-md max-w-200 mx-auto">
+      <div>
+      <h2 class="text-gray-600">Destino</h2>
+      <input type="text" placeholder="Buscar destinos" class="focus:outline-none text-sm bg-transparent text-gray-700">
+    </div>
+     <hr class="border-gray-200 border-1 h-10">
+    <div>
+      <h2 class="text-gray-600">Llegada</h2>
+      <input type="text" placeholder="Agregar fecha" class="focus:outline-none text-sm bg-transparent text-gray-700">
+      </div>
+      <hr class="border-gray-200 border-1 h-10">
+      <div>
+      <h2 class="text-gray-600">Salida</h2>
+      <input type="text" placeholder="Agregar fecha" class="focus:outline-none text-sm bg-transparent text-gray-700">
+      </div>
+      <hr class="border-gray-200 border-1 h-10">
+      <div>
+      <h2 class="text-gray-600">Huéspedes</h2>
+      <input type="text" placeholder="Cuántos?" class="focus:outline-none text-sm bg-transparent text-gray-700">
+    </div>
+    <div class="bg-blue-400 rounded-full size-10 grid place-items-center">
+    <img src="assets/search-svgrepo-com.svg" alt="" class="size-6 object-cover hover:scale-110 transition duration-150 ease-in-out">
+    </div>
     </article>
-    <article class="bg-gray-900 w-auto rounded-xl h-screen"></article>
+  </header>
+  <section class="px-8 py-4 bg-gray-50">
+    <h2 class="text-lg font-bold text-gray-700">Alojamientos populares en Santiago de los Caballeros</h2>
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
+      <article class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-250 ease-in-out border border-gray-100">
+        <div class="relative">
+          <img src="https://picsum.photos/400/300" alt="Departamento" class="w-full h-40 object-cover">
+          <span class="absolute top-2 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full shadow">Favorito</span>
+          <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <img src="assets/heart-svgrepo-com.svg" alt="Like" class="size-5 hover:scale-120 transition duration-150 ease-in-out">
+          </button>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-gray-700">Departamento en Santiago</h3>
+          <p class="text-xs text-gray-500">Santiago de los Caballeros</p>
+          <p class="mt-2 text-sm font-semibold text-gray-800">$92 USD por 2 noches</p>
+        </div>
+      </article>
+      <article class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-250 ease-in-out border border-slate-200">
+        <div class="relative">
+          <img src="https://picsum.photos/400/300" alt="Departamento" class="w-full h-40 object-cover">
+          <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full shadow">Favorito</span>
+          <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <img src="assets/heart-svgrepo-com.svg" alt="Like" class="size-5 hover:scale-120 transition duration-150 ease-in-out">
+          </button>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-slate-800">Departamento en Santiago</h3>
+          <p class="text-xs text-slate-500">Santiago de los Caballeros</p>
+          <p class="mt-2 text-sm font-semibold text-slate-900">$92 USD por 2 noches</p>
+        </div>
+      </article>
+      <article class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-250 ease-in-out border border-slate-200">
+        <div class="relative">
+          <img src="https://picsum.photos/400/300" alt="Departamento" class="w-full h-40 object-cover">
+          <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full shadow">Favorito</span>
+          <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <img src="assets/heart-svgrepo-com.svg" alt="Like" class="size-5 hover:scale-120 transition duration-150 ease-in-out">
+          </button>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-slate-800">Departamento en Santiago</h3>
+          <p class="text-xs text-slate-500">Santiago de los Caballeros</p>
+          <p class="mt-2 text-sm font-semibold text-slate-900">$92 USD por 2 noches</p>
+        </div>
+      </article>
+      <article class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-250 ease-in-out border border-slate-200">
+        <div class="relative">
+          <img src="https://picsum.photos/400/300" alt="Departamento" class="w-full h-40 object-cover">
+          <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full shadow">Favorito</span>
+          <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <img src="assets/heart-svgrepo-com.svg" alt="Like" class="size-5 hover:scale-120 transition duration-150 ease-in-out">
+          </button>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-slate-800">Departamento en Santiago</h3>
+          <p class="text-xs text-slate-500">Santiago de los Caballeros</p>
+          <p class="mt-2 text-sm font-semibold text-slate-900">$92 USD por 2 noches</p>
+        </div>
+      </article>
+      <article class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-250 ease-in-out border border-slate-200">
+        <div class="relative">
+          <img src="https://picsum.photos/400/300" alt="Departamento" class="w-full h-40 object-cover">
+          <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full shadow">Favorito</span>
+          <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <img src="assets/heart-svgrepo-com.svg" alt="Like" class="size-5 hover:scale-120 transition duration-150 ease-in-out">
+          </button>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-slate-800">Departamento en Santiago</h3>
+          <p class="text-xs text-slate-500">Santiago de los Caballeros</p>
+          <p class="mt-2 text-sm font-semibold text-slate-900">$92 USD por 2 noches</p>
+        </div>
+      </article>
+      
+      
+    </section>
+    <h2 class="text-lg mt-4 font-bold text-slate-800">Disponibles en Punta Cana este fin de semana</h2>
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
+      <article class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-250 ease-in-out border border-slate-200">
+        <div class="relative">
+          <img src="https://picsum.photos/400/300" alt="Departamento" class="w-full h-40 object-cover">
+          <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full shadow">Favorito</span>
+          <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <img src="assets/heart-svgrepo-com.svg" alt="Like" class="size-5 hover:scale-120 transition duration-150 ease-in-out">
+          </button>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-slate-800">Departamento en Santiago</h3>
+          <p class="text-xs text-slate-500">Santiago de los Caballeros</p>
+          <p class="mt-2 text-sm font-semibold text-slate-900">$92 USD por 2 noches</p>
+        </div>
+      </article>
+      <article class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-250 ease-in-out border border-slate-200">
+        <div class="relative">
+          <img src="https://picsum.photos/400/300" alt="Departamento" class="w-full h-40 object-cover">
+          <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full shadow">Favorito</span>
+          <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <img src="assets/heart-svgrepo-com.svg" alt="Like" class="size-5 hover:scale-120 transition duration-150 ease-in-out">
+          </button>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-slate-800">Departamento en Santiago</h3>
+          <p class="text-xs text-slate-500">Santiago de los Caballeros</p>
+          <p class="mt-2 text-sm font-semibold text-slate-900">$92 USD por 2 noches</p>
+        </div>
+      </article>
+      <article class="bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-xl transition duration-250 ease-in-out border border-slate-200">
+        <div class="relative">
+          <img src="https://picsum.photos/400/300" alt="Departamento" class="w-full h-40 object-cover">
+          <span class="absolute top-2 left-2 bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full shadow">Favorito</span>
+          <button class="absolute top-2 right-2 bg-white p-1 rounded-full shadow">
+            <img src="assets/heart-svgrepo-com.svg" alt="Like" class="size-5 hover:scale-120 transition duration-150 ease-in-out">
+          </button>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-slate-800">Departamento en Santiago</h3>
+          <p class="text-xs text-slate-500">Santiago de los Caballeros</p>
+          <p class="mt-2 text-sm font-semibold text-slate-900">$92 USD por 2 noches</p>
+        </div>
+      </article>
+      
+    </section>
   </section>
+
 </body>
 </html>
