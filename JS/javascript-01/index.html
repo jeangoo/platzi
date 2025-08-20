@@ -18,15 +18,18 @@
       </ul>
     </nav>
   </header>
-  <section class="m-8">
+  <section class="m-8 grid gap-4">
+  <h1 id="section-title">Section</h1>
   <p>Texto 1</p>
   <p>Texto 2</p>
   <p>Texto 3</p>
   <p>Texto 4 para probar la shh key</p>
   <p>shh key from cursor</p>
   <button onclick="showAlert()" id="btn">Get Started</button>
-  <div id="display">
-    <input id="input-id" class="input-class" type="text" placeholder="Enter your name">
+  <button onclick="fetchData()">Fetch data</button>
+  <div id="datafetched"></div>
+  <div id="display" class="mt-10 flex items-center gap-4">
+    <input id="input-id" type="text" class="focus:outline-none bg-blue-300 py-2 px-4 rounded-xl" placeholder="Enter your name">
     <input type="submit" onclick="check()" id="btn" class="cursor-pointer bg-blue-300 p-2 rounded-xl font-bold">
   </div>
 </section>
