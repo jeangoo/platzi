@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <h2 id="title">javascript</h2>
-      <ul id="menu">
+  <header class="p-4">
+    <nav class="flex justify-between items-center">
+      <h2 id="title" class="text-yellow-500 text-3xl font-extrabold">javascript</h2>
+      <ul id="menu" class="flex items-center gap-4">
         <li><a href="">Home</a></li>
         <li class="menu-item"><a href="" >About Me</a></li>
         <li class="menu-item"><a href="" >Blogs</a></li>
@@ -17,12 +18,18 @@
       </ul>
     </nav>
   </header>
+  <section class="m-8">
   <p>Texto 1</p>
   <p>Texto 2</p>
   <p>Texto 3</p>
   <p>Texto 4 para probar la shh key</p>
   <p>shh key from cursor</p>
   <button onclick="showAlert()" id="btn">Get Started</button>
+  <div id="display">
+    <input id="input-id" class="input-class" type="text" placeholder="Enter your name">
+    <input type="submit" onclick="check()" id="btn" class="cursor-pointer bg-blue-300 p-2 rounded-xl font-bold">
+  </div>
+</section>
   <script src="app.js"></script>
 </body>
 </html>
