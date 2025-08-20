@@ -26,3 +26,18 @@ const nextSibling = firstChild.nextElementSibling;
 console.log(nextSibling);
 
 console.log("prueba git push")
+
+const URL = "https://pokeapi.co/api/v2/pokemon/ditto"
+const display = document.getElementById('datafetched')
+
+function fetchData() {
+  fetch(URL)
+  .then(res => res.json())
+  .then(data =>
+  display.innerHTML = `
+  <h1>${data.name}</h1>
+  <img src=${data.sprites.front_default} alt='photo'>
+  `
+)};
+
+console.log('warp')
