@@ -62,8 +62,7 @@ button.addEventListener('click', () => {
   box.classList.toggle('invisible');              
 });
 
-
-const itemsList = document.querySelector("article")
+const ul = document.querySelector("ul")
 
 listOfItems = []
   while (listOfItems.length < 3) {
@@ -74,7 +73,7 @@ listOfItems = []
   }
 
 for(item of listOfItems) {
-  itemsList.innerHTML = `
+  ul.innerHTML = `
   <li>${item}</li>
   `
 }
