@@ -43,5 +43,5 @@ function fetchData() {
 
 console.log('warp')
 console.log('is')
-consoler.log('error')
+console.log('error')
 console.log('new')
