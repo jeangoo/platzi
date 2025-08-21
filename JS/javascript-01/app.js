@@ -45,3 +45,19 @@ console.log('warp')
 console.log('is')
 console.log('error')
 console.log('new')
+
+// const box = document.getElementById('box')
+// const toggleBtn = document.getElementById('btn')
+
+// function toggleVisibility() {
+//     box.classList.toggle("invisible");
+// }
+
+// toggleBtn.addEventListener('click', toggleVisibility);
+
+
+const button = document.getElementById('btn')
+
+button.addEventListener('click', () => {
+  box.classList.toggle('invisible');              
+});
