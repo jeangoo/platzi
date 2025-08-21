@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 200px 1fr 1fr;
+            grid-template-rows: 70px 1fr 150px;
+            grid-template-areas: 
+            "header header header"
+            "aside section section"
+            "footer footer footer"
+            ;
+        }
+
+        @media (width < 600px) {
+            .container {
+                grid-template-areas: 
+            "header header aside"
+            "section section section"
+            "footer footer footer"
+            ;
+            }
+        }
+
+        .container header {
+            grid-area: header;
+            background-color: black;
+        }
+
+        .container aside {
+            grid-area: aside;
+            background-color: grey;
+        }
+
+        .container section {
+            grid-area: section;
+            background-color: darkslategrey;
+        }
+
+        .container footer {
+            grid-area: footer;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header>header</header>
+        <aside>aside</aside>
+        <section>section</section>
+        <footer>footer</footer> 
+    </section>
+</body>
+</html>
