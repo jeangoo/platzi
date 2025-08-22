@@ -41,10 +41,10 @@ function fetchData() {
 )};
 
 
-console.log('warp')
-console.log('is')
-console.log('error')
-console.log('new')
+// console.log('warp')
+// console.log('is')
+// console.log('error')
+// console.log('new')
 
 const box = document.getElementById('box')
 box.addEventListener('mouseover',  () => {
@@ -82,3 +82,29 @@ addBtn.addEventListener("click", (
       }
 }
 ))
+
+const form = document.getElementById("form-id")
+
+form.addEventListener("submit", (event) => {
+
+  event.preventDefault()
+  const name = form.elements["name"].value;
+  const email = form.elements["email"].value;
+  if (!email.includes("@")) {
+    alert("Email must be a valid email address.")
+    return
+  }
+  if (name.length < 4) {
+    alert("Name must be at least 4 characters long.")
+    return
+  }
+  alert("Form submitted succesfully.")
+  console.log(`Name: ${name}, Email: ${email}`);
+
+  const formData = {
+    name: name,
+    email: email
+  }
+
+  console.log(formData)
+});
