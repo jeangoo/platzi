@@ -46,7 +46,10 @@ console.log('is')
 console.log('error')
 console.log('new')
 
-// const box = document.getElementById('box')
+const box = document.getElementById('box')
+box.addEventListener('mouseover',  () => {
+  box.classList.toggle('lightblue')
+});
 // const toggleBtn = document.getElementById('btn')
 
 // function toggleVisibility() {
@@ -63,10 +66,11 @@ button.addEventListener('click', () => {
 });
 
 const ul = document.querySelector("#list")
-
+const addBtn = document.getElementById("addBtn")
 listOfItems = []
 
-function addItem() {
+addBtn.addEventListener("click", (
+  function addItem() {
   const item = prompt("enter the item do you want to add: ")
     if (item !== null && item.trim() !== "") {
       listOfItems.push(item)
@@ -77,3 +81,4 @@ function addItem() {
         alert("Item cannot be a empty string.")
       }
 }
+))
