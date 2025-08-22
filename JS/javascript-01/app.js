@@ -62,18 +62,16 @@ button.addEventListener('click', () => {
   box.classList.toggle('invisible');              
 });
 
-const ul = document.querySelector("ul")
+const ul = document.querySelector("#list")
 
 listOfItems = []
-  while (listOfItems.length < 3) {
-    const item = prompt("enter the item do you want to add: ")
+
+function addItem() {
+  const item = prompt("enter the item do you want to add: ")
     if (item !== null && item.trim() !== "") {
       listOfItems.push(item)
-    }
-  }
-
-for(item of listOfItems) {
-  ul.innerHTML = `
-  <li>${item}</li>
-  `
+      ul.innerHTML += `
+       <li>${item}</li>
+      `
+}
 }
