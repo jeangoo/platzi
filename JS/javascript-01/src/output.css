@@ -11,6 +11,7 @@
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-indigo-50: oklch(96.2% 0.018 272.314);
     --color-indigo-400: oklch(67.3% 0.182 276.935);
     --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-stone-400: oklch(70.9% 0.01 56.259);
@@ -310,6 +311,9 @@
   .bg-blue-300 {
     background-color: var(--color-blue-300);
   }
+  .bg-indigo-50 {
+    background-color: var(--color-indigo-50);
+  }
   .bg-indigo-400 {
     background-color: var(--color-indigo-400);
   }
@@ -333,6 +337,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
   }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
