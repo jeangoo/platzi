@@ -73,5 +73,7 @@ function addItem() {
       ul.innerHTML += `
        <li>${item}</li>
       `
-}
+      } else {
+        alert("Item cannot be a empty string.")
+      }
 }
