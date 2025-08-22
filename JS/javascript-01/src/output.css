@@ -267,8 +267,17 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-\[\#f7df1e\] {
+    border-color: #f7df1e;
+  }
   .border-amber-400 {
     border-color: var(--color-amber-400);
+  }
+  .bg-\[\#f7df1e\] {
+    background-color: #f7df1e;
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-blue-300 {
     background-color: var(--color-blue-300);
@@ -281,6 +290,9 @@
   }
   .bg-stone-800 {
     background-color: var(--color-stone-800);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -316,6 +328,9 @@
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
+  }
+  .text-\[\#f7df1e\] {
+    color: #f7df1e;
   }
   .text-black {
     color: var(--color-black);
@@ -357,15 +372,34 @@
     --tw-duration: 400ms;
     transition-duration: 400ms;
   }
+  .placeholder\:text-black {
+    &::placeholder {
+      color: var(--color-black);
+    }
+  }
   .placeholder\:text-white {
     &::placeholder {
       color: var(--color-white);
+    }
+  }
+  .hover\:bg-\[\#f7df1e\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #f7df1e;
+      }
     }
   }
   .hover\:bg-amber-400 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-amber-400);
+      }
+    }
+  }
+  .hover\:text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black);
       }
     }
   }
