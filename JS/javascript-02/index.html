@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
+    <title>Task manager - JS</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -21,16 +21,21 @@
         }
 
         article {
-            background: lightskyblue;
+            background: gainsboro;
             box-shadow: 0 5px 5px 5px rgba(0,0,0, 0.15);
-            width: 500px;
-            height: 400px;
+            width: 800px;
+            min-height: 200px;
             border-radius: 10px;
             padding: 1rem;
         }
 
         article h1 {
             text-align: center;
+            font-size: 2rem;
+        }
+
+        article h1 strong {
+            color: dodgerblue;
         }
 
         section {
@@ -47,48 +52,67 @@
              transition: 250ms;
         }
 
-         #deletebtn {
-            padding: 10px;
-            border-radius: 12px;
-            border: none;
-            background: red;
-            color: white;
-            font-weight: extrabold;
-             transition: 250ms;
-        }
-
         button:hover {
             box-shadow: 1px 2px 5px 3px rgba(0,0,0, 0.15);
             transition: 250ms;
             scale: 1.1;
         }
 
-        .buttons {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
         ul {
             margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            align-items: center;
+            justify-content: space-between;
+            flex: 2;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
         }
 
         h2 {
             margin-top: 6px;
         }
+
+        .task-input {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .task-input input {
+            flex: 1;
+            padding: 0.50rem;
+            border: none;
+            border-radius: 12px;
+        }
+        .task-input input:focus {
+            outline: none;
+        }
+
+
     </style>
 </head>
 <body>
     <article>
-     <h1>Task manager</h1>
+     <h1>Task 
+       <strong> manager</strong> </h1>
      <section>
-        <div class="buttons">
-        <button id="addbtn">Add task</button>
-        <button id="deletebtn">Delete task</button>
+        
+        <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Enter a new task">
+                     <button id="addbtn">Add task</button>
         </div>
-        <h2>Tasks</h2>
         <ul>
-            <li>Task 1</li>
+            <li>Task 1
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" class="svg"><path d="M22 5a1 1 0 0 1-1 1H3a1 1 0 0 1 0-2h5V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1h5a1 1 0 0 1 1 1zM4.934 21.071 4 8h16l-.934 13.071a1 1 0 0 1-1 .929H5.931a1 1 0 0 1-.997-.929zM15 18a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0zm-4 0a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0zm-4 0a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0z"/></svg>
+            </li>
         </ul>
      </section>
     </article>
