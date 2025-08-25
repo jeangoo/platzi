@@ -1,14 +1,14 @@
 const list = document.querySelector("ul")
 const listItems = list.getElementsByTagName("li")
 const addBtn = document.getElementById("addbtn")
-const delBtn = document.getElementsByClassName("svg")
+// const delBtn = document.querySelector(".deleteBtn")
 const taskInput = document.querySelector("input")
 
 
 addBtn.addEventListener('click', () => {
-    task = taskInput.value
+    let task = taskInput.value
     if (task !== null && task.trim() !== "") {
-        list.innerHTML += `<li>${task} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" class="svg"><path d="M22 5a1 1 0 0 1-1 1H3a1 1 0 0 1 0-2h5V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1h5a1 1 0 0 1 1 1zM4.934 21.071 4 8h16l-.934 13.071a1 1 0 0 1-1 .929H5.931a1 1 0 0 1-.997-.929zM15 18a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0zm-4 0a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0zm-4 0a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0z"/></svg></li>`
+        list.innerHTML += `<li>${task}  <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button> </li>`
         taskInput.value = "";
     } else {
         alert("Error trying to add the task.")
@@ -16,7 +16,20 @@ addBtn.addEventListener('click', () => {
 })
 
 list.addEventListener('click', (event) => {
-    if (event.target.classList.contains('svg')) {
+    if (event.target.classList.contains('deleteBtn')) {
         event.target.parentElement.remove()
+    }
+})
+
+list.addEventListener('click', (event) => {
+    if (event.target.classList.contains('editBtn')) {
+        let li = event.target.parentElement;
+        let currentTask = li.firstChild.textContent.trim()
+        let editedTask = prompt(`Edit the task ${currentTask}`) 
+        if (editedTask !== null && editedTask.trim() !== "") {
+            li.innerHTML = `${editedTask}  <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>`
+        } else {
+            alert("Error trying to edit the task.")
+        }
     }
 })

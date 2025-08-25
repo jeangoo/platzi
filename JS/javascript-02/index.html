@@ -21,7 +21,7 @@
         }
 
         article {
-            background: gainsboro;
+            background: rgb(243, 238, 238);
             box-shadow: 0 5px 5px 5px rgba(0,0,0, 0.15);
             width: 800px;
             min-height: 200px;
@@ -49,11 +49,30 @@
             background: deepskyblue;
             color: white;
             font-weight: extrabold;
-             transition: 250ms;
+            transition: 250ms;
+        }
+
+        .deleteBtn {
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            background: rgb(228, 53, 30);
+            color: white;
+            font-weight: extrabold;
+            width: 80px;
+        }
+        .editBtn {
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            background: green;
+            color: white;
+            font-weight: extrabold;
+            width: 80px;
         }
 
         button:hover {
-            box-shadow: 1px 2px 5px 3px rgba(0,0,0, 0.15);
+            /* box-shadow: 1px 2px 5px 3px rgba(0,0,0, 0.15); */
             transition: 250ms;
             scale: 1.1;
         }
@@ -71,7 +90,7 @@
         li {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
             margin-bottom: 10px;
         }
 
@@ -95,6 +114,9 @@
         .task-input input:focus {
             outline: none;
         }
+        button {
+        cursor: pointer;
+        }
 
 
     </style>
@@ -106,12 +128,13 @@
      <section>
         
         <div class="task-input">
-        <input type="text" id="taskInput" placeholder="Enter a new task">
+        <input type="text" id="taskInput" placeholder="Enter a new task" >
                      <button id="addbtn">Add task</button>
         </div>
         <ul>
             <li>Task 1
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" class="svg"><path d="M22 5a1 1 0 0 1-1 1H3a1 1 0 0 1 0-2h5V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1h5a1 1 0 0 1 1 1zM4.934 21.071 4 8h16l-.934 13.071a1 1 0 0 1-1 .929H5.931a1 1 0 0 1-.997-.929zM15 18a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0zm-4 0a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0zm-4 0a1 1 0 0 0 2 0v-6a1 1 0 0 0-2 0z"/></svg>
+            <button class="editBtn">Edit</button>
+            <button class="deleteBtn">Delete</button>
             </li>
         </ul>
      </section>
