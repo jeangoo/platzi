@@ -17,11 +17,23 @@
         body {
             display: grid;
             place-content: center;
-            min-height: 100vh
+            min-height: 100vh;
+            background: #272626;
+        }
+
+        .toggle {
+            position: absolute;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            color: black;
+            font-weight: extrabold;
+            transition: 250ms;
         }
 
         article {
-            background: rgb(243, 238, 238);
+            background: white;
             box-shadow: 0 5px 5px 5px rgba(0,0,0, 0.15);
             width: 800px;
             min-height: 200px;
@@ -92,6 +104,9 @@
             align-items: center;
             justify-content: space-evenly;
             margin-bottom: 10px;
+            background: rgb(243, 238, 238);
+            padding: 6px;
+            border-radius: 10px;
         }
 
         h2 {
@@ -103,6 +118,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            padding: 10px;
         }
 
         .task-input input {
@@ -111,6 +127,12 @@
             border: none;
             border-radius: 12px;
         }
+
+        .task-input input::placeholder{
+            font-weight: extrabold;
+            font-size: medium;
+        }
+
         .task-input input:focus {
             outline: none;
         }
@@ -122,13 +144,14 @@
     </style>
 </head>
 <body>
+    <button class="toggle">Toggle theme</button>
     <article>
      <h1>Task 
        <strong> manager</strong> </h1>
      <section>
         
         <div class="task-input">
-        <input type="text" id="taskInput" placeholder="Enter a new task" >
+        <input type="text" id="taskInput" placeholder="Enter a new task" autocomplete="off">
                      <button id="addbtn">Add task</button>
         </div>
         <ul>
