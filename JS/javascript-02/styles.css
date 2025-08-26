@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  list-style: none;
+  font-family: poppins, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #f8f9ff; 
+}
+.body-dark {
+  background: #2b2c34; 
+}
+.toggle {
+  position: absolute;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  font-weight: 700;
+  transition: 250ms;
+}
+article {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 1rem;
+}
+article h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+article h1 strong {
+  color: #6366f1; 
+}
+section {
+  padding: 4rem;
+}
+#addbtn {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #6366f1; 
+  color: white;
+  font-weight: 700;
+  transition: 250ms;
+}
+.deleteBtn {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #ef4444; 
+  color: white;
+  font-weight: 700;
+  width: 80px;
+}
+.editBtn {
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  font-weight: 700;
+  width: 80px;
+}
+button:hover {
+  transition: 250ms;
+  scale: 1.1;
+}
+ul {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: space-between;
+  flex: 2;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background: #f9fafb; 
+  padding: 6px;
+  border-radius: 10px;
+  position: relative;
+}
+h2 {
+  margin-top: 6px;
+  color: #111827; 
+}
+.task-input {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.task-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+}
+.task-input input::placeholder {
+  font-weight: 600;
+  font-size: medium;
+  color: #9ca3af;
+}
+.task-input input:focus {
+  outline: none;
+  border: 2px solid #6366f1; 
+}
+button {
+  cursor: pointer;
+}
+.checkbox {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: 2px solid #9ca3af;
+}
+.checked {
+  background: #6366f1; 
+}
+.task-and-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.buttons {
+  display: flex;
+  right: 10px;
+  gap: 6px;
+}
