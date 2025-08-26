@@ -17,7 +17,11 @@ body {
 }
 
 .li-dark {
-  background: #323232;
+  background: #232323;
+}
+
+.task-dark {
+  color: white;
 }
 
 .article-dark {
