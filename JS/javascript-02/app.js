@@ -5,11 +5,21 @@ const addBtn = document.getElementById("addbtn");
 const taskInput = document.querySelector("input");
 const toggleBtn = document.querySelector(".toggle");
 const checkbox = document.querySelector(".checkbox");
+const article = document.querySelector('.container')
+const title = document.querySelector("h1");
+const liBackground = document.querySelector("li")
 
 addBtn.addEventListener("click", () => {
   let task = taskInput.value;
   if (task !== null && task.trim() !== "") {
-    list.innerHTML += `<li>${task}  <button class="editBtn">Edit</button>  <button class="deleteBtn">Delete</button> </li>`;
+    list.innerHTML += `<li>
+          <div class="task-and-input">
+            <div class="checkbox"></div>
+            ${task}
+          </div>
+          <button class="editBtn">Edit</button>
+          <button class="deleteBtn">Delete</button>
+        </li>`;
     taskInput.value = "";
   } else {
     alert("Error trying to add the task.");
@@ -26,7 +36,14 @@ list.addEventListener("click", (event) => {
     let currentTask = li.firstChild.textContent.trim();
     let editedTask = prompt(`Edit the task ${currentTask}`);
     if (editedTask !== null && editedTask.trim() !== "") {
-      li.innerHTML = `${editedTask}  <button class="editBtn">Edit</button> <button class="deleteBtn">Delete</button>`;
+      li.innerHTML = `
+          <div class="task-and-input">
+            <div class="checkbox"></div>
+            ${editedTask}
+          </div>
+          <button class="editBtn">Edit</button>
+          <button class="deleteBtn">Delete</button>
+        `;
     } else {
       alert("Error trying to edit the task.");
     }
@@ -41,6 +58,9 @@ taskInput.addEventListener("keydown", (event) => {
 
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("body-dark");
+  article.classList.toggle("article-dark");
+  title.classList.toggle("title-dark")
+  liBackground.classList.toggle("li-dark")
 });
 
 checkbox.addEventListener("click", () => {

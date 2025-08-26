@@ -15,6 +15,15 @@ body {
 .body-dark {
   background: #2b2c34; 
 }
+
+.li-dark {
+  background: #323232;
+}
+
+.article-dark {
+  background: #26262b;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
 .toggle {
   position: absolute;
   margin: 20px;
@@ -37,6 +46,10 @@ article {
 article h1 {
   text-align: center;
   font-size: 2rem;
+}
+
+.title-dark {
+  color: white;
 }
 article h1 strong {
   color: #6366f1; 
