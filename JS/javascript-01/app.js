@@ -108,3 +108,17 @@ form.addEventListener("submit", (event) => {
 
   console.log(formData)
 });
+
+const person = {
+  name: "Jean",
+  age: 30,
+  coords: {
+    lat: 0,
+    lng: -10,
+  }
+}
+
+localStorage.setItem("person", JSON.stringify(person))
+
+const returnPerson = JSON.parse(localStorage.getItem("person"))
+console.log(returnPerson)
