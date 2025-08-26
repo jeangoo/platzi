@@ -39,3 +39,7 @@ taskInput.addEventListener("keydown", (event) => {
         addBtn.click()
     }
 })
+
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle("body-dark")
+})
