@@ -97,3 +97,6 @@ function updateLocalStorage() {
   console.log(tasks)
   localStorage.setItem("tasks", JSON.stringify(tasks))
 }
+
+// localStorage.setItem("name", "Jean")
+console.log(localStorage.getItem("name"))
