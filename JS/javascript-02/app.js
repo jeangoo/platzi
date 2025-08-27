@@ -99,4 +99,7 @@ function updateLocalStorage() {
 }
 
 // localStorage.setItem("name", "Jean")
-console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("name"))
+
+// const add = (x, y) => x + y;
+// console.log(add(5, 5))
