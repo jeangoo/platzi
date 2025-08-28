@@ -29,17 +29,17 @@ body {
   .main-container {
     width: 400px;
     margin: 0 auto;
-}
+  }
 
-.side-container {
-  width: 400px;
-  margin: 0 auto;
-}
+  .side-container {
+    width: 400px;
+    margin: 0 auto;
+  }
 
-#city-input {
-  width: 400px;
-  margin: 0 auto;
-}
+  #city-input {
+    width: 400px;
+    margin: 0 auto;
+  }
 }
 .side-container {
   max-width: 600px;
@@ -98,12 +98,12 @@ button:hover {
 }
 
 .body-dark {
-    background: #1e1e1e;
+  background: #1e1e1e;
 }
 
 .dark-toggle-button {
-    background: black;
-    color: white;
+  background: black;
+  color: white;
 }
 
 .dark-input {

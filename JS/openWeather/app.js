@@ -2,16 +2,16 @@ const KEY = "e1603f0b236c7c2499f1df47f1739cd2";
 const mainDisplay = document.querySelector(".main-details");
 const sideDisplay = document.querySelector(".side-details");
 const getCityInput = document.getElementById("city-input");
-const toggleButton = document.querySelector('button')
-const mainContainer = document.querySelector('.main-container')
-const sideContainer = document.querySelector('.side-container')
-const svg = document.querySelector('.svg')
+const toggleButton = document.querySelector("button");
+const mainContainer = document.querySelector(".main-container");
+const sideContainer = document.querySelector(".side-container");
 
 getCityInput.addEventListener("keydown", (event) => {
-    const CITY_NAME = getCityInput.value;
+  const CITY_NAME = getCityInput.value;
   if (event.key === "Enter") {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${CITY_NAME}&appid=${KEY}&units=metric`)
+      `https://api.openweathermap.org/data/2.5/weather?q=${CITY_NAME}&appid=${KEY}&units=metric`
+    )
       .then((response) => response.json())
       .then((data) => {
         mainDisplay.innerHTML = `
@@ -41,15 +41,16 @@ getCityInput.addEventListener("keydown", (event) => {
                 <h3>${data.main["humidity"]}</h3>
                 </div>
                 </section>   
-            `; 
-      }) 
-      .catch(err => {
-        mainDisplay.innerHTML = `<p>Error fetching the data: ${err}</p>`}) 
-  } 
+            `;
+      })
+      .catch((err) => {
+        mainDisplay.innerHTML = `<p>Error fetching the data: ${err}</p>`;
+      });
+  }
 });
 
-toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle("body-dark")
-    toggleButton.classList.toggle("dark-toggle-button") 
-    getCityInput.classList.toggle("dark-input")
-})
+toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("body-dark");
+  toggleButton.classList.toggle("dark-toggle-button");
+  getCityInput.classList.toggle("dark-input");
+});
