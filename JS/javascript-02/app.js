@@ -5,11 +5,11 @@ const addBtn = document.getElementById("addbtn");
 const taskInput = document.getElementById("taskInput");
 const toggleBtn = document.querySelector(".toggle");
 const checkbox = document.querySelector(".checkbox");
-const article = document.querySelector('.container')
+const article = document.querySelector(".container");
 const title = document.querySelector("h1");
-const liBackground = document.querySelector("li")
-const taskTitle = document.querySelector(".task-and-input")
-getTaskInLocalStorage()
+const liBackground = document.querySelector("li");
+const taskTitle = document.querySelector(".task-and-input");
+getTaskInLocalStorage();
 
 addBtn.addEventListener("click", () => {
   const task = taskInput.value;
@@ -22,7 +22,7 @@ addBtn.addEventListener("click", () => {
           <button class="editBtn">Edit</button>
           <button class="deleteBtn">Delete</button>
         </li>`;
-        saveTaskInLocalStorage(task)
+    saveTaskInLocalStorage(task);
     taskInput.value = "";
   } else {
     alert("Error trying to add the task.");
@@ -35,7 +35,7 @@ list.addEventListener("click", (event) => {
   }
 
   if (event.target.classList.contains("editBtn")) {
-    const  li = event.target.parentElement;
+    const li = event.target.parentElement;
     const currentTask = li.firstChild.textContent.trim();
     const editedTask = prompt(`Edit the task ${currentTask}`);
     if (editedTask !== null && editedTask.trim() !== "") {
@@ -47,7 +47,7 @@ list.addEventListener("click", (event) => {
           <button class="editBtn">Edit</button>
           <button class="deleteBtn">Delete</button>
         `;
-        updateLocalStorage()
+      updateLocalStorage();
     } else {
       alert("Error trying to edit the task.");
     }
@@ -73,13 +73,13 @@ checkbox.addEventListener("click", () => {
 });
 
 function saveTaskInLocalStorage(task) {
-  const tasks = JSON.parse(localStorage.getItem("tasks") || "[]")
-  tasks.push(task)
-  localStorage.setItem("tasks", JSON.stringify(tasks))
+  const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+  tasks.push(task);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function getTaskInLocalStorage() {
-  const tasks = JSON.parse(localStorage.getItem("tasks") || "[]")
+  const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
   tasks.forEach((task) => {
     list.innerHTML += `<li>
           <div class="task-and-input">
@@ -89,13 +89,15 @@ function getTaskInLocalStorage() {
           <button class="editBtn">Edit</button>
           <button class="deleteBtn">Delete</button>
         </li>`;
-  })
+  });
 }
 
 function updateLocalStorage() {
-  const tasks = Array.from(list.querySelectorAll("li")).map((li) => li.firstChild.textContent);
-  console.log(tasks)
-  localStorage.setItem("tasks", JSON.stringify(tasks))
+  const tasks = Array.from(list.querySelectorAll("li")).map(
+    (li) => li.firstChild.textContent
+  );
+  console.log(tasks);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 // localStorage.setItem("name", "Jean")

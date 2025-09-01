@@ -1,3 +1,3 @@
-const value = 100_000
+const value = 100_000;
 
 console.log(value);
