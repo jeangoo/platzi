@@ -35,7 +35,9 @@ const fetchData = async () => {
       console.log(`Pokedex number: ${id}`);
       console.log(`Name: ${name}`);
       console.log(`Ability: ${primaryAbility}`);
-    });
+    })
+    .catch((err) => console.log(err))
+    .finally(console.log("Function completed succesfully."));
 };
 
 fetchData();
