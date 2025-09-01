@@ -18,3 +18,19 @@ async function listOfBots(array) {
 
 const botNames = listOfBots(["Bumper", "Proton", "Rapid", "Quest", "SunShine"]);
 console.log("Explorer (outside)");
+
+const asyncFunction = () => {
+  setTimeout(() => {
+    return "inside function";
+  }, 2000);
+};
+
+const awaitFunction = async () => {
+  const asyncResponse = await asyncFunction();
+  console.log(asyncResponse);
+  console.log("await function");
+};
+
+console.log("-");
+awaitFunction();
+console.log("-");
