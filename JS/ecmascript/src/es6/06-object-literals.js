@@ -1,9 +1,9 @@
 function newBotCreated(name, usage, uId) {
-    return {
+  return {
     id: uId,
     name,
     usage,
-    }
+  };
 }
 
-console.log(newBotCreated(usage="AI assistant", name="Robot", 1))
+console.log(newBotCreated((usage = "AI assistant"), (name = "Robot"), 1));
