@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic import</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: onest;
+      }
+
+      body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        gap: 8px;
+      }
+
+      button {
+        padding: 6px;
+        font-weight: bolder;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: 450ms;
+        font-size: 1.3rem;
+      }
+
+      button:hover {
+        scale: 1.1;
+        transition: 450ms;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="mainBtn">Import module</button>
+    <button id="sideBtn">Import side module</button>
+
+    <script type="module" src="06-dynamic-import.js"></script>
+  </body>
+</html>

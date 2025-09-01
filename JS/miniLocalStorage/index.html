@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Jokes manager</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
       * {
@@ -50,11 +50,24 @@
       .showedJokes {
         margin-top: 16px;
       }
+
+      .type {
+        margin-top: 8px;
+      }
+      span::before {
+        content: 'Type: ';
+        font-weight: bolder;
+      }
+
+      .errorMsg {
+        color: red;
+      }
     </style>
   </head>
   <body>
     <article class="container">
       <h2>random jokes</h2>
+      <div class="type"></div>
       <section class="display"></section>
       <div class="buttons">
         <button id="saveBtn">Save joke</button>
