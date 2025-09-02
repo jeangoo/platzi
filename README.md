@@ -1,10 +1,13 @@
 # platzi
 
 # a
+
 ## aa
+
 ### aaa
 
 #### github link
+
 [Github](https://github.com/jeangoo/platzi#)
 
 ![image](https://lf-cdn.trae.ai/obj/trae-ai-us/og.jpeg)

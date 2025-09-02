@@ -19,10 +19,19 @@ async function listOfBots(array) {
 const botNames = listOfBots(["Bumper", "Proton", "Rapid", "Quest", "SunShine"]);
 console.log("Explorer (outside)");
 
+// const asyncFunction = () => {
+//   setTimeout(() => {
+//     return "inside function";
+//   }, 2000);
+// };
 const asyncFunction = () => {
-  setTimeout(() => {
-    return "inside function";
-  }, 2000);
+  return new Promise((res, rej) => {
+    if (true) {
+      res("async function");
+    } else {
+      rej("error");
+    }
+  });
 };
 
 const awaitFunction = async () => {
@@ -33,4 +42,4 @@ const awaitFunction = async () => {
 
 console.log("-");
 awaitFunction();
-console.log("-");
+console.log("end");
