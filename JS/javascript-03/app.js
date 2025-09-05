@@ -8,6 +8,7 @@ const itemCount = document.querySelector("strong");
 const checkoutBtn = document.getElementById("checkout");
 const checkoutModal = document.getElementById("modal");
 const closeModalBtn = document.getElementById("closeBtn");
+const totalPrice = document.getElementById("price");
 
 const fetchData = async () => {
   const index = Math.floor(Math.random() * 21);
@@ -40,17 +41,29 @@ addItemToCartBtn.addEventListener("click", () => {
     description: dataDetailsDisplay.querySelector("p").textContent,
   };
   if (currentItem) {
+    try {
     items.push(currentItem);
     fetchData();
-    itemsNumberCart.textContent = `${items.length}`;
-    itemCount.textContent = `( ${items.length} item )`;
-    localStorage.setItem("items", JSON.stringify(items));
-  } else {
-    alert("error");
+      itemsNumberCart.textContent = `${items.length}`;
+      itemCount.textContent = `( ${items.length} item )`;
+      localStorage.setItem("items", JSON.stringify(items));
+    } catch (err) {
+      alert(`error: ${err}`);
+    }
   }
 });
 
 checkoutBtn.addEventListener("click", () => {
+  const items = JSON.parse(localStorage.getItem("items") || "[]");
+  let counter = 0;
+  for (const item of items) {
+    counter += parseFloat(item.price.replace("$", ""));
+  }
+
+  totalPrice.innerHTML = `
+  <span class="text-xl">Total: <strong class="font-black text-2xl"><span class="font-black text-2xl text-emerald-500 mr-0.5">$</span>${counter.toFixed(2)}</strong></span>
+  `;
+
   checkoutModal.style.display = "block";
   checkoutModal.style.zIndex = "100";
   checkoutModal.style.position = "absolute";

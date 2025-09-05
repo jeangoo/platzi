@@ -1,105 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bento Grid</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bento Grid</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+      }
 
-    body {
-      background: #f4f4f5;
-      color: #1a1a1a;
-    }
-    
-    header {
-      height: 60px;
-      background: #0ea5e9;
-      padding: 1rem 2rem;
-      color: white;
-    }
+      body {
+        background: #f4f4f5;
+        color: #1a1a1a;
+      }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+      header {
+        height: 60px;
+        background: #0ea5e9;
+        padding: 1rem 2rem;
+        color: white;
+      }
 
-    nav ul {
-      display: flex;
-      gap: 20px;
-    }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-    nav ul li {
-      list-style: none;
-    }
+      nav ul {
+        display: flex;
+        gap: 20px;
+      }
 
-    main {
-      margin: 40px auto;
-      max-width: 900px;
-    }
+      nav ul li {
+        list-style: none;
+      }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 10px;
-    }
+      main {
+        margin: 40px auto;
+        max-width: 900px;
+      }
 
-    .grid-container div {
-      min-height: 150px;
-      min-width: 150px;
-      border-radius: 12px;
-      padding: 1rem;
-      color: white;
-      font-weight: 600;
-      display: flex;
-      justify-content: center;
-      transition: 650ms;
-    }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+      }
 
-    div:hover {
+      .grid-container div {
+        min-height: 150px;
+        min-width: 150px;
+        border-radius: 12px;
+        padding: 1rem;
+        color: white;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        transition: 650ms;
+      }
+
+      div:hover {
         scale: 1.04;
         transition: 650ms;
-    }
+      }
 
-    .box1 { background: #f472b6; grid-column: span 2; }
-    .box2 { background: #60a5fa; }
-    .box3 { background: #34d399;}
-    .box4 { background: #facc15; color: #000; }
-    .box5 { background: #a78bfa; grid-row: span 2;}
-    .box6 { background: #fb7185; }
-    .box7 { background: #38bdf8;}
+      .box1 {
+        background: #f472b6;
+        grid-column: span 2;
+      }
+      .box2 {
+        background: #60a5fa;
+      }
+      .box3 {
+        background: #34d399;
+      }
+      .box4 {
+        background: #facc15;
+        color: #000;
+      }
+      .box5 {
+        background: #a78bfa;
+        grid-row: span 2;
+      }
+      .box6 {
+        background: #fb7185;
+      }
+      .box7 {
+        background: #38bdf8;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Logo</h1>
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
 
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <h1>Logo</h1>
-      <ul>
-        <li>Home</li>
-        <li>Shop</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="grid-container">
-      <div class="box1">New Arrivals</div>
-      <div class="box2">Summer Deals</div>
-      <div class="box3">Tops</div>
-      <div class="box4">Accessories</div>
-      <div class="box5">Sneakers</div>
-      <div class="box6">Trending Now</div>
-      <div class="box7">Join the Club</div>
-    </section>
-  </main>
-</body>
+    <main>
+      <section class="grid-container">
+        <div class="box1">New Arrivals</div>
+        <div class="box2">Summer Deals</div>
+        <div class="box3">Tops</div>
+        <div class="box4">Accessories</div>
+        <div class="box5">Sneakers</div>
+        <div class="box6">Trending Now</div>
+        <div class="box7">Join the Club</div>
+      </section>
+    </main>
+  </body>
 </html>
