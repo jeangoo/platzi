@@ -9,6 +9,24 @@ const checkoutBtn = document.getElementById("checkout");
 const checkoutModal = document.getElementById("modal");
 const closeModalBtn = document.getElementById("closeBtn");
 const totalPrice = document.getElementById("price");
+const submitBtn = document.getElementById("submitBtn");
+const cardValue = document.getElementById("cardValue");
+const personName = document.getElementById("name");
+const cardNumber = document.getElementById("cardNumber");
+const validThru = document.getElementById("validThru");
+
+const callItemsLength = () => {
+  const items = JSON.parse(localStorage.getItem("items") || "[]");
+  if (items.length > 0) {
+    itemsNumberCart.textContent = `${items.length}`;
+    itemCount.textContent = `( ${items.length} item )`;
+  } else {
+    itemsNumberCart.textContent = ``;
+    itemCount.textContent = ``;
+  }
+};
+
+callItemsLength();
 
 const fetchData = async () => {
   const index = Math.floor(Math.random() * 21);
@@ -75,3 +93,39 @@ checkoutBtn.addEventListener("click", () => {
 closeModalBtn.addEventListener("click", () => {
   checkoutModal.style.display = "none";
 });
+
+function error(message) {
+  alert("Error " + message);
+}
+
+function success() {
+  alert("All fields are valid");
+  personName.value = "";
+  cardNumber.value = "";
+  validThru.value = "";
+  cardValue.value = "";
+}
+
+const formAuthenticate = () => {
+  const personNamePattern = /^[a-zA-Z\s-]+$/;
+  const cardNumberPattern = /^4[0-9]{12}(?:[0-9]{3})?$/;
+  const validThruPattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+  const cardValuePattern = /^\d{3}$/;
+
+  if (!personNamePattern.test(personName.value.trim())) {
+    return error("Invalid name");
+  }
+  if (!cardNumberPattern.test(cardNumber.value.trim())) {
+    return error("Invalid card number");
+  }
+  if (!validThruPattern.test(validThru.value.trim())) {
+    return error("Invalid expiry date (MM/YY)");
+  }
+  if (!cardValuePattern.test(cardValue.value.trim())) {
+    return error("Invalid CVV");
+  }
+
+  success();
+};
+
+submitBtn.addEventListener("click", formAuthenticate);
