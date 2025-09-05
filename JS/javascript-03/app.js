@@ -42,8 +42,8 @@ addItemToCartBtn.addEventListener("click", () => {
   };
   if (currentItem) {
     try {
-    items.push(currentItem);
-    fetchData();
+      items.push(currentItem);
+      fetchData();
       itemsNumberCart.textContent = `${items.length}`;
       itemCount.textContent = `( ${items.length} item )`;
       localStorage.setItem("items", JSON.stringify(items));
@@ -61,7 +61,9 @@ checkoutBtn.addEventListener("click", () => {
   }
 
   totalPrice.innerHTML = `
-  <span class="text-xl">Total: <strong class="font-black text-2xl"><span class="font-black text-2xl text-emerald-500 mr-0.5">$</span>${counter.toFixed(2)}</strong></span>
+  <span class="text-xl">Total: <strong class="font-black text-2xl"><span class="font-black text-2xl text-emerald-500 mr-0.5">$</span>${counter.toFixed(
+    2
+  )}</strong></span>
   `;
 
   checkoutModal.style.display = "block";

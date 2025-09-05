@@ -48,6 +48,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-onest: onest;
+    --font-inter: inter;
     --font-poppins: poppins;
   }
 }
@@ -515,6 +516,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .font-inter {
+    font-family: var(--font-inter);
   }
   .font-onest {
     font-family: var(--font-onest);
