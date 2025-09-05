@@ -19,7 +19,7 @@ const callItemsLength = () => {
   const items = JSON.parse(localStorage.getItem("items") || "[]");
   if (items.length > 0) {
     itemsNumberCart.textContent = `${items.length}`;
-    itemCount.textContent = `( ${items.length} item )`;
+    itemCount.textContent = ` ( ${items.length} item )`;
   } else {
     itemsNumberCart.textContent = ``;
     itemCount.textContent = ``;
@@ -40,7 +40,7 @@ const fetchData = async () => {
       `;
 
       dataDetailsDisplay.innerHTML = `
-      <span class="font-bold text-stone-800 text-2xl text-pretty">${title}</span>
+      <span class="font-bold text-stone-800 text-2xl text-pretty mt-2">${title}</span>
       <small class="font-black text-xl mt-2">$${price}</small>
       <p class="mt-4 text-stone-500 text-pretty">${description}</p>
         `;

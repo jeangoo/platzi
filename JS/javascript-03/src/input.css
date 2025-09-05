@@ -4,7 +4,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-onest: onest;
-  --font-inter: inter;
-  --font-poppins: poppins;
+  --font-onest: onest, system-ui;
+  --font-inter: inter, system-ui;
+  --font-poppins: poppins, system-ui;
 }

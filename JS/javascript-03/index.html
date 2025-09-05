@@ -7,28 +7,28 @@
   <link rel="stylesheet" href="src/output.css">
 </head>
 <body class="m-4 font-inter">
-  <article id="modal" class="hidden mx-auto bg-white 0 max-w-340 h-170 rounded-xl shadow-xl p-4">
+  <article id="modal" class="hidden mx-auto bg-gray-100 0 max-w-340 h-170 rounded-xl shadow-xl p-4">
     <div class="absolute left-0 top-0 flex items-center gap-4 m-4">
       <h2 class="text-2xl font-bold">Checkout</h2>
     </div>
 
     <section class="grid grid-cols-2 gap-10 mt-10">
-      <section class="bg-gray-100 p-4 rounded">
+      <section class="bg-gray-200 p-4 rounded-xl">
         <div class="flex items-center gap-6">
         <img src="https://cdn.freebiesupply.com/logos/large/2x/visa-logo-png-transparent.png" class="w-20 xs:w-30 object-cover lg:w-76" alt="">
          <img src="https://download.logo.wine/logo/Mastercard/Mastercard-Logo.wine.png" alt="" class="w-20 xs:w-30 object-cover lg:w-76">
          </div>
         <div class="flex gap-4 items-center">
-        <input type="checkbox" name="" id="" class="appearance-none size-6 border-2 border-gray-400 rounded-full checked:bg-blue-500 checked:border-blue-800" >
+        <input type="checkbox" name="" id="" class="appearance-none size-6 border-2 border-gray-400 rounded-full checked:bg-indigo-400 checked:border-indigo-600" >
         <p class="font-bold text-lg">Pay with credit card</p>
         </div>
       </section>
-    <section class="bg-gray-100 p-4 rounded">
+    <section class="bg-gray-200 p-4 rounded-xl">
        <div class="flex items-center gap-6">
         <img src="https://www.top-bank.ch/images/logo_540/paypal.png" alt="" class="w-full object-cover">
         </div>
          <div class="flex gap-4 items-center">
-        <input type="checkbox" name="" id="" class="appearance-none size-6 border-2 border-gray-400 rounded-full checked:bg-blue-500 checked:border-blue-800" >
+        <input type="checkbox" name="" id="" class="appearance-none size-6 border-2 border-gray-400 rounded-full checked:bg-indigo-400 checked:border-indigo-600" >
         <p class="font-bold text-lg">Pay with paypal</p>
         </div>
       </section>
@@ -37,19 +37,19 @@
     <section class="p-4 gap-4 flex flex-wrap">
       <div class="flex flex-col">
       <label class="text-stone-500">Cardholder's name</label>
-      <input type="text" class="w-100 py-2 px-4 bg-gray-50 rounded focus:outline-none border-2 border-gray-200" id="name" autocomplete="off">
+      <input type="text" class="w-100 py-2 px-4 bg-gray-50 rounded focus:outline-none border-2 border-gray-300" id="name" autocomplete="off">
         </div>
 
         <div class="flex flex-col">
 
           <label class="text-stone-500">Card number</label>
-          <input type="text" class="w-100 py-2 px-4 bg-gray-50 rounded focus:outline-none border-2 border-gray-200" id="cardNumber" autocomplete="off">
+          <input type="text" class="w-100 py-2 px-4 bg-gray-50 rounded focus:outline-none border-2 border-gray-300" id="cardNumber" autocomplete="off">
         </div>
 
         <div class="flex flex-col">
      
           <label class="text-stone-500">Valid thru</label>
-          <input type="text" class="w-30 py-2 px-4 bg-gray-50 rounded focus:outline-none border-2 border-gray-200" id="validThru" autocapitalize="off">
+          <input type="text" class="w-30 py-2 px-4 bg-gray-50 rounded focus:outline-none border-2 border-gray-300" id="validThru" placeholder="MM / YY" autocomplete="off">
          </div>
         <div class="flex gap-4 items-center">
 
@@ -57,7 +57,7 @@
 <div class="flex flex-col">
 
   <label class="text-stone-500">CVV / CVC *</label>
-  <input type="text" class="w-30 py-2 px-4 bg-gray-50 rounded focus:outline-none border-2 border-gray-200" placeholder="MM / YY" id="cardValue" autocomplete="off">
+  <input type="text" class="w-30 py-2 px-4 bg-gray-50 rounded focus:outline-none border-2 border-gray-300" id="cardValue" autocomplete="off">
 </div>
 
   <p class="text-stone-500">* CVV or CVC is the card security code, unique three digits number on th eback of your card separate from its number.</p>
@@ -67,27 +67,29 @@
 </div>
     </section>
 
-    <footer class=" absolute bottom-0 left-0 w-full h-20 bg-gray-100 flex p-4 justify-between items-center">
-      <button class="text-pink-500 bg-white border-2 border-gray-200 font-bold rounded-xl px-4 py-2 cursor-pointer hover:scale-105 transition" id="closeBtn">Back</button>
-      <button class="bg-rose-500 border-2 border-rose-600 text-white font-bold rounded-xl px-4 py-2 cursor-pointer hover:scale-105 transition" id="submitBtn">Submit</button>
+    <footer class=" absolute bottom-0 left-0 w-full h-20 bg-gray-200 rounded-b-xl flex p-4 justify-between items-center">
+      <button class="text-indigo-500 bg-white border-2 border-gray-300/90 font-bold rounded-xl px-4 py-2 cursor-pointer hover:scale-105 transition" id="closeBtn">Back</button>
+      <button class="bg-indigo-500 border-2 border-indigo-600/60 text-white font-bold rounded-xl px-4 py-2 cursor-pointer hover:bg-indigo-600 hover:border-indigo-700/60  transition duration-300" id="submitBtn">Submit</button>
     </footer>
   </article>
   
-  <div class="mb-4 p-1 size-fit rounded flex gap-4" id="cart">
-    <div id="cartNumber" class="absolute text-3xl text-rose-500 font-black top-2 left-4"></div>
-    <div class="bg-gray-100 border-2 border-gray-300/60 rounded-md">
+  <div class="mb-4 size-fit flex items-center gap-4" id="cart">
+
+    <div id="cartNumberContainer" class="absolute top-0 left-2"><span id="cartNumber" class="text-4xl text-indigo-500 font-black"></span></div>
+
+    <div class="bg-gray-100 border-2 border-gray-300/60 rounded-xl shadow-xl p-1">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="60"><path d="M8,3V7H21L18,17H6V4H4A1,1,0,0,1,4,2H7A1,1,0,0,1,8,3ZM6,20.5A1.5,1.5,0,1,0,7.5,19,1.5,1.5,0,0,0,6,20.5Zm9,0A1.5,1.5,0,1,0,16.5,19,1.5,1.5,0,0,0,15,20.5Z"/></svg>
     </div>
-    <button id="checkout" class="rounded font-bold bg-rose-500 border-2 border-rose-600 text-white shadow-pink-300 shadow-xs  px-4 cursor-pointer hover:scale-105 transition mt-2">Proceed to checkout <strong></strong></button>
+    <button id="checkout" class="rounded-xl font-bold bg-indigo-500 border-2 border-indigo-600/60 text-white shadow-xl h-12 px-4 cursor-pointer hover:bg-indigo-600 hover:border-indigo-700/60  transition duration-300">Proceed to checkout<strong></strong></button>
   </div>
 
 
-  <article class="max-w-200 p-4 border-2 bg-gray-100  border-gray-300/60 rounded-md hover:shadow-2xl transition duration-500">
+  <article class="max-w-200 p-4 border-2 bg-gray-100  border-gray-300/60 rounded-xl shadow-xl hover:shadow-2xl transition duration-500">
     <div id="infoDisplay"></div>
     <div id="details" class="flex flex-col"></div>
-    <div class="flex gap-4 items-center">
-      <button id="next" class="rounded font-bold text-rose-500 bg-white border-2 border-gray-200 py-2 px-4 cursor-pointer hover:scale-105 transition mt-2">Next</button>
-      <button id="cartBtn" class="rounded font-bold bg-rose-500 border-2 border-rose-600 text-white py-2 px-4 cursor-pointer hover:scale-105 transition mt-2">Add to cart</button>
+    <div class="flex gap-4 items-center mt-2">
+      <button id="next" class="rounded-xl font-bold text-indigo-500 bg-white border-2 border-gray-200 py-2 px-4 cursor-pointer hover:scale-105 transition duration-200">Next</button>
+      <button id="cartBtn" class="rounded-xl font-bold bg-indigo-500 border-2 border-indigo-600/60 text-white py-2 px-4 cursor-pointer hover:bg-indigo-600 hover:border-indigo-700/60  transition duration-300">Add to cart</button>
     </div>
   </article>
   <script src="app.js">   
