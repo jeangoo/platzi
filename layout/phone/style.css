@@ -1,17 +1,17 @@
 * {
   box-sizing: border-box;
   margin: 0 auto;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .phone {
   margin-top: 15px;
   position: relative;
-  border: 8px solid #8E7DBE; /* Lavanda suave */
+  border: 8px solid #8e7dbe; /* Lavanda suave */
   height: 600px;
   border-radius: 40px;
   width: 300px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 10px 39px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 10px 39px rgba(0, 0, 0, 0.1);
   background: white;
   overflow: hidden;
 }
@@ -20,7 +20,7 @@
   position: absolute;
   height: 130px;
   width: 100%;
-  background: #F7CFD8; 
+  background: #f7cfd8;
 }
 
 .phone header h1 {
@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-   color: #8E7DBE;
+  color: #8e7dbe;
 }
 
 .phone header input {
@@ -61,7 +61,7 @@
 }
 
 .phone main .info h3 {
-  color: #8E7DBE; /* Lavanda suave */
+  color: #8e7dbe; /* Lavanda suave */
   cursor: pointer;
   font-size: 1rem;
 }
@@ -82,7 +82,7 @@
   height: 110px;
   width: 110px;
   border-radius: 14px;
-  border: 1px solid #F4F8D3; /* Amarillo pálido */
+  border: 1px solid #f4f8d3; /* Amarillo pálido */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@
 }
 
 .phone footer {
-  background: #F7CFD8;
+  background: #f7cfd8;
   position: absolute;
   bottom: 0;
   width: 100%;
