@@ -14,6 +14,7 @@ const cardValue = document.getElementById("cardValue");
 const personName = document.getElementById("name");
 const cardNumber = document.getElementById("cardNumber");
 const validThru = document.getElementById("validThru");
+const mainContent = document.getElementById("mainContent");
 
 const callItemsLength = () => {
   const items = JSON.parse(localStorage.getItem("items") || "[]");
@@ -36,7 +37,7 @@ const fetchData = async () => {
       const { image, title, price, description } = data;
 
       dataInfoDisplay.innerHTML = `
-      <img src="${image}" alt="${title}" class="w-full object-cover rounded md:size-50">
+      <img src="${image}" alt="${title}" class="w-full object-cover md:size-50">
       `;
 
       dataDetailsDisplay.innerHTML = `
@@ -87,11 +88,17 @@ checkoutBtn.addEventListener("click", () => {
   checkoutModal.style.display = "block";
   checkoutModal.style.zIndex = "100";
   checkoutModal.style.position = "absolute";
-  checkoutModal.style.margin = "0 auto";
+  checkoutModal.style.marginLeft = "2.5rem";
+  mainContent.style.display = "none";
 });
 
 closeModalBtn.addEventListener("click", () => {
   checkoutModal.style.display = "none";
+  mainContent.style.display = "block";
+  personName.value = "";
+  cardNumber.value = "";
+  validThru.value = "";
+  cardValue.value = "";
 });
 
 function error(message) {
@@ -119,10 +126,18 @@ const formAuthenticate = () => {
     return error("Invalid card number");
   }
   if (!validThruPattern.test(validThru.value.trim())) {
-    return error("Invalid expiry date (MM/YY)");
+    return error("Invalid expire date (MM/YY)");
   }
   if (!cardValuePattern.test(cardValue.value.trim())) {
     return error("Invalid CVV");
+  }
+  if (
+    !personNamePattern.test(personName.value.trim()) &&
+    !cardNumberPattern.test(cardNumber.value.trim()) &&
+    !validThruPattern.test(validThru.value.trim()) &&
+    !cardValuePattern.test(cardValue.value.trim())
+  ) {
+    return error("All fields are invalid.");
   }
 
   success();

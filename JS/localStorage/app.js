@@ -9,9 +9,10 @@ const clearBtn = document.querySelector(".clearQuotes");
 function fetchQuote() {
   fetch("https://api.quotable.io/random?tags=&author=")
     .then((response) => response.json())
-    .then(
-      (quote) => (display.innerHTML = `${quote.content} - ${quote.author}`)
-    );
+    .then((quote) => {
+      const { content, author } = quote;
+      display.innerHTML = `${content} - ${author}`;
+    });
 }
 fetchQuote();
 
