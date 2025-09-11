@@ -30,11 +30,16 @@ const callItemsLength = () => {
 callItemsLength();
 
 const fetchData = async () => {
-  const index = Math.floor(Math.random() * 21);
-  await fetch(`https://fakestoreapi.com/products/${index}`)
+  const index = Math.floor(Math.random() * (285 - 234 + 1)) + 234;
+  await fetch(`https://api.escuelajs.co/api/v1/products/${index}`)
     .then((response) => response.json())
     .then((data) => {
-      const { image, title, price, description } = data;
+      const {
+        title,
+        price,
+        description,
+        category: { image },
+      } = data;
 
       dataInfoDisplay.innerHTML = `
       <img src="${image}" alt="${title}" class="w-full object-cover md:size-50">

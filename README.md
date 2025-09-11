@@ -7,4 +7,4 @@ Repository full of folders from [`platzi`](https://platzi.com) courses.
 - Go to your terminal
 
 - Copy and paste this  `bash 
-git clone `
+git clone https://github.com/jeangoo/platzi.git`
