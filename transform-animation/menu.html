@@ -1,145 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
 
-        body {
-            background: #90f;
-        }
-        
-        header {
-            height: 100px;
-            background: #09f;
-            padding: 1rem   ;
-        }
+      body {
+        background: #90f;
+      }
 
-        ul {
-            list-style: none;
-            padding: 5px;
-            margin: 0;
-        }
+      header {
+        height: 100px;
+        background: #09f;
+        padding: 1rem;
+      }
 
-        a {
-            text-decoration: none;
-            color: black;
-        }
+      ul {
+        list-style: none;
+        padding: 5px;
+        margin: 0;
+      }
 
-        .nav li ul{
-            display: block;
-            opacity: 0;
-            position: absolute;
-            transition: 250ms ease;
-            z-index: 1000;
-        }
+      a {
+        text-decoration: none;
+        color: black;
+      }
 
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
+      .nav li ul {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        transition: 250ms ease;
+        z-index: 1000;
+      }
 
-        .nav li:hover > ul {
-            transition: 250ms;
-            opacity: 1;
-            background-color: white;
-            height: auto;
-            width: fit-content;
-        }
+      .nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
 
-        .nav li ul li {
-            position: relative;
-        }
+      .nav li:hover > ul {
+        transition: 250ms;
+        opacity: 1;
+        background-color: white;
+        height: auto;
+        width: fit-content;
+      }
 
-        .nav li ul li a {
-            display: block;
-            padding: 0.5rem 1rem;
-        }
+      .nav li ul li {
+        position: relative;
+      }
 
-        .nav li ul li a:hover {
-            background: #eee;
-        }
+      .nav li ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+      }
 
-    
+      .nav li ul li a:hover {
+        background: #eee;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    <ul class="nav">
-   <li><a href="#">Men</a>
-      <ul>
-         <li><a href="#">Tees</a></li>
-         <li><a href="#">Pants</a>
-            <ul>
-               <li><a href="#">Shorts</a></li>
-               <li><a href="#">Joggers</a></li>
-               <li><a href="#">Chinos</a></li>
-            </ul>
-         </li>
-         <li><a href="#">Jackets</a></li>
-         <li><a href="#">Shoes</a></li>
-      </ul>
-   </li>
+      <ul class="nav">
+        <li>
+          <a href="#">Men</a>
+          <ul>
+            <li><a href="#">Tees</a></li>
+            <li>
+              <a href="#">Pants</a>
+              <ul>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Joggers</a></li>
+                <li><a href="#">Chinos</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Jackets</a></li>
+            <li><a href="#">Shoes</a></li>
+          </ul>
+        </li>
 
-   <li><a href="#">Women</a>
-      <ul>
-         <li><a href="#">Dresses</a></li>
-         <li><a href="#">Tops</a>
-            <ul>
-               <li><a href="#">Blouses</a></li>
-               <li><a href="#">Crop Tops</a></li>
-               <li><a href="#">Tunics</a></li>
-            </ul>
-         </li>
-         <li><a href="#">Skirts</a></li>
-         <li><a href="#">Heels</a></li>
-      </ul>
-   </li>
+        <li>
+          <a href="#">Women</a>
+          <ul>
+            <li><a href="#">Dresses</a></li>
+            <li>
+              <a href="#">Tops</a>
+              <ul>
+                <li><a href="#">Blouses</a></li>
+                <li><a href="#">Crop Tops</a></li>
+                <li><a href="#">Tunics</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Skirts</a></li>
+            <li><a href="#">Heels</a></li>
+          </ul>
+        </li>
 
-   <li><a href="#">Kids</a>
-      <ul>
-         <li><a href="#">Boys</a>
-            <ul>
-               <li><a href="#">Shirts</a></li>
-               <li><a href="#">Shorts</a></li>
-               <li><a href="#">Sneakers</a></li>
-            </ul>
-         </li>
-         <li><a href="#">Girls</a>
-            <ul>
-               <li><a href="#">Dresses</a></li>
-               <li><a href="#">Leggings</a></li>
-               <li><a href="#">Flats</a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
+        <li>
+          <a href="#">Kids</a>
+          <ul>
+            <li>
+              <a href="#">Boys</a>
+              <ul>
+                <li><a href="#">Shirts</a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Sneakers</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Girls</a>
+              <ul>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Leggings</a></li>
+                <li><a href="#">Flats</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
 
-   <li><a href="#">Accessories</a>
-      <ul>
-         <li><a href="#">Hats</a></li>
-         <li><a href="#">Bags</a></li>
-         <li><a href="#">Sunglasses</a></li>
-         <li><a href="#">Watches</a></li>
-      </ul>
-   </li>
+        <li>
+          <a href="#">Accessories</a>
+          <ul>
+            <li><a href="#">Hats</a></li>
+            <li><a href="#">Bags</a></li>
+            <li><a href="#">Sunglasses</a></li>
+            <li><a href="#">Watches</a></li>
+          </ul>
+        </li>
 
-   <li><a href="#">Sale</a>
-      <ul>
-         <li><a href="#">Up to 50%</a></li>
-         <li><a href="#">Clearance</a></li>
-         <li><a href="#">Last Chance</a></li>
+        <li>
+          <a href="#">Sale</a>
+          <ul>
+            <li><a href="#">Up to 50%</a></li>
+            <li><a href="#">Clearance</a></li>
+            <li><a href="#">Last Chance</a></li>
+          </ul>
+        </li>
       </ul>
-   </li>
-</ul>
-</header>
-
-</body>
+    </header>
+  </body>
 </html>

@@ -1,79 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .container {
-            height: 100px;
-            width: 100px;
-            border: 3px solid blue;
+      .container {
+        height: 100px;
+        width: 100px;
+        border: 3px solid blue;
+      }
+
+      .item {
+        height: 50px;
+        width: 50px;
+        animation: animation 4s infinite;
+      }
+
+      @keyframes animation {
+        0% {
+          background-color: fuchsia;
+          height: 100px;
+          width: 100px;
         }
 
-        .item {
-            height: 50px;
-            width: 50px;
-             animation: animation 4s infinite;
+        15% {
+          background-color: aqua;
+          height: 50px;
+          width: 50px;
         }
 
-        @keyframes animation {
-
-            0% {
-                background-color: fuchsia;
-                height: 100px;
-                width: 100px;
-            }
-
-            15% {
-                background-color: aqua;
-                height: 50px;
-                width: 50px;
-            }
-
-            25% {
-                background-color: aquamarine;
-            }
-
-            50% {
-                background-color: lightskyblue;
-                width: 75px;
-                height: 75px;
-            }
-
-            75% {
-                scale: 1.2;
-            }
-
-            100% {
-                background-color: blue;
-                width: 100px;
-                height: 100px;
-                scale: 1.5;
-            }
+        25% {
+          background-color: aquamarine;
         }
 
-        .item2 {
-            margin-top: 100px;
-            background: dodgerblue;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            transition: transform 3s linear;
+        50% {
+          background-color: lightskyblue;
+          width: 75px;
+          height: 75px;
         }
-        
-        .item2:hover {
-            transform: translateX(200px);
-            transition: transform 1s linear;
+
+        75% {
+          scale: 1.2;
         }
+
+        100% {
+          background-color: blue;
+          width: 100px;
+          height: 100px;
+          scale: 1.5;
+        }
+      }
+
+      .item2 {
+        margin-top: 100px;
+        background: dodgerblue;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transition: transform 3s linear;
+      }
+
+      .item2:hover {
+        transform: translateX(200px);
+        transition: transform 1s linear;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <article class="container">
-        <div class="item"></div>
+      <div class="item"></div>
     </article>
 
     <div class="item2"></div>
-</body>
+  </body>
 </html>

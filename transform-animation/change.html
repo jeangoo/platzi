@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        button {
-            width: 100px;
-            height: 30px;
-            background: wheat;
-        }
+      button {
+        width: 100px;
+        height: 30px;
+        background: wheat;
+      }
 
-        .other:hover {
-            scale: 1.1;
-            transition: scale 500ms;
-        }
+      .other:hover {
+        scale: 1.1;
+        transition: scale 500ms;
+      }
 
-        .better {
-            will-change: transform;
-            transition: transform 500ms;
-        }
+      .better {
+        will-change: transform;
+        transition: transform 500ms;
+      }
 
-        .better:hover {
-            transform: translateY(5px)
-        }
+      .better:hover {
+        transform: translateY(5px);
+      }
 
-        .worst {
-             will-change: margin-top;
-             transition: margin-top 500ms;
-        }
+      .worst {
+        will-change: margin-top;
+        transition: margin-top 500ms;
+      }
 
-        .worst:hover {
-            margin-top: 5px;
-        }
+      .worst:hover {
+        margin-top: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <button class="better"></button>
-        <button class="worst"></button>
-        <button class="other"></button>
+      <button class="better"></button>
+      <button class="worst"></button>
+      <button class="other"></button>
     </div>
-</body>
+  </body>
 </html>
