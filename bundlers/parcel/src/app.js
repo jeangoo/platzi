@@ -3,12 +3,16 @@ import { farewellParcel } from "./index";
 import { returnDelayParcel } from "./index";
 import { characterData } from "./index";
 import { vowelsCounter } from "./index";
+import { counter } from "./index";
+import { inputVowelsCounter } from "./index";
+import { rpsMain } from "./index";
 
 const $app = document.getElementById("app");
 const $list = document.querySelector("ul");
 
 $app.innerHTML = greetParcel();
 $app.innerHTML += farewellParcel();
+counter();
 returnDelayParcel();
 
 const {
@@ -33,3 +37,7 @@ Parcel's JavaScript compiler is built on SWC, which handles transpiling JavaScri
 
 Parcel's CSS transformer and minifier is built in Rust on top of the browser-grade CSS parser used in Firefox. It's over 100x faster than other JavaScript-based transformers and minifiers.`);
 console.log(text);
+
+inputVowelsCounter();
+
+rpsMain();

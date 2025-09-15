@@ -8,6 +8,80 @@
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+  margin: 10px;
+}
+
 ul {
   margin-top: 10px;
+}
+
+button {
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: green;
+}
+
+.sub:hover {
+  background-color: red;
+}
+
+strong {
+  color: oklch(79.452% 0.12186 9.303);
+}
+
+.vowels-counter-container {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.vowels-counter-container input,
+input {
+  padding-inline: 0.7rem;
+  padding-block: 0.5rem;
+  border-radius: 6px;
+  border-color: oklch(59.987% 0.00007 271.152 / 0.604);
+}
+
+.vowels-counter-container input:focus,
+input {
+  outline: none;
+}
+
+.vowels-counter-container p {
+  margin-top: 10px;
+}
+
+.vowels-counter-list {
+  list-style: none;
+}
+
+.choices-box {
+  margin-bottom: 10px;
+  border: 2px solid oklch(59.987% 0.00007 271.152 / 0.604);
+  padding: 1rem;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.choices-box ul {
+  list-style: none;
+}
+
+.game-container {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.game-results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
 }

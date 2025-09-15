@@ -12,9 +12,36 @@
       <section id="app"></section>
       <ul></ul>
     </main>
-    <!-- <button>counter: <strong></strong></button>
-    <button id="sub">subtract</button>
-    <button id="add">add</button> -->
+    <button class="counter"">counter: <strong></strong></button>
+    <button id="sub" class="sub">subtract</button>
+    <button id="add" class="add">add</button>
+    <section class="vowels-counter-container">
+      <input type="text" placeholder="Enter your text">
+      <ul class="vowels-counter-list">
+        
+      </ul>
+    </section>
+    <section class="game-container">
+      <div class="choices-box">
+        <h2>Choices</h2>
+        <ul>
+          <li>Rock</li>
+          <li>Paper</li>
+          <li>Scissors</li>
+        </ul>
+      </div>
+      <input list="options" type="text" id="choiceInput" placeholder="Enter your choice" autocomplete="off">
+      <datalist id="options">
+        <option>Rock</option>
+        <option>Paper</option>
+        <option>Scissors</option>
+      </datalist>
+      <div class="game-results">
+        <span id="machineChoice"></span>
+        <span id="userChoice"></span>
+        <span id="result"></span>
+      </div>
+    </section>
   </body>
   <!-- <script defer type="module" src="index.js"></script> -->
   <script defer type="module" src="app.js"></script>
