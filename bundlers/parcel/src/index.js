@@ -43,7 +43,7 @@ export default greetParcel;
 export const characterData = {
   id: 1,
   name: "Arthur Morgan",
-  image: ".png",
+  image: "https://www.giantbomb.com/a/uploads/scale_small/5/56742/3061198-arthur%20portrait%20transparent.png",
   gender: "Masculine",
   age: 36,
   gang: "Van der Linde",
