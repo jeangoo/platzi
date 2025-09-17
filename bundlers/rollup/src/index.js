@@ -13,7 +13,7 @@ const main = async () => {
   <img src=${image} alt=${firstName} ${lastName}>
   <span>${firstName} ${lastName} ${maidenName}</span>
   <p>${email}</p> 
-  </article>
+  </article> 
   `;
   }).join("");
   const newItem = document.createElement("section");
