@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  max-width: 900px;
+  padding: 1rem;
+  background: oklch(78.577% 0.00009 271.152 / 0.281);
+  border-radius: 8px;
+  transition: 250ms;
+}
+.container:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: 250ms;
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div img {
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 8px
+}
+
+.quotes {
+  font-weight: bold;
+  margin-top: 10px;
+  display: flex;
+}
