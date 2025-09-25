@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"); */
+
+@font-face {
+  font-family: 'poppins';
+  src: url('../fonts/poppins.black.ttf') format('ttf');
+  font-weight: 400;
+  font-size: normal;
+}
 
 * {
   margin: 0;
@@ -23,11 +30,12 @@ body {
   transition: 250ms;
 }
 .container:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transition: 250ms;
 }
 
-.personal-info {
+.personal-info { 
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -36,7 +44,7 @@ body {
 div img {
   max-width: 300px;
   object-fit: cover;
-  border-radius: 8px
+  border-radius: 8px;
 }
 
 .quotes {
