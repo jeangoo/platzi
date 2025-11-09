@@ -25,7 +25,7 @@ console.log(nextSibling);
 console.log("prueba git push");
 
 const URL = "https://pokeapi.co/api/v2/pokemon/ditto";
-const display = document.getElementById("datafetched");
+const display = document.getElementById("datafetched"); 
 
 function fetchData() {
   fetch(URL)
