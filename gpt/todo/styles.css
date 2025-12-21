@@ -1,0 +1,14 @@
+.done {
+  color: #09f;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+li {
+  display: flex;
+  gap: 0.6rem;
+}

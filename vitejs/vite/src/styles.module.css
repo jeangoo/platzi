@@ -1,0 +1,10 @@
+.img {
+  height: auto;
+  width: 600px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}

@@ -1,0 +1,11 @@
+{
+  "user": {
+    "id": "1",
+    "username": "jean",
+    "password": "5326",
+    "lines_of_code": ["+311", "-24"]
+  },
+  "session": {
+    "token": "ww8g9w23b2vsafa8fa"
+  }
+}

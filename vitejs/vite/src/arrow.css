@@ -1,0 +1,14 @@
+svg {
+  animation: pulse 1.2s ease-in-out infinite alternate;
+  width: 14px;
+  height: 14px;
+}
+
+@keyframes pulse {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-4px);
+  }
+}

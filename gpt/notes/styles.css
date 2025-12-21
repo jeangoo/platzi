@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: roboto;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #505051;
+}
+
+p,
+span {
+  color: #bdbfc0;
+}
+
+body {
+  padding: 1rem 1.5rem;
+  min-height: 100vh;
+  background: #e7e9eb;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.badge-container {
+  margin-top: 0.8rem;
+}
+
+.badge {
+  background: transparent;
+  color: white;
+  padding: 0.225rem 0.525rem;
+  border-radius: 9999px;
+  font-size: 0.795rem;
+}
+
+.high {
+  color: #f26467;
+  background: #ffe2e2;
+}
+
+.medium {
+  color: #3297ff;
+  background: #dbeafe;
+}
+
+.low {
+  color: #05d66b;
+  background: #dbfce7;
+}
+
+.unknown {
+  color: #4a5565;
+  background: #f3f4f6;
+}
+
+#add {
+  background: #292d32;
+  color: white;
+  border-radius: 10px;
+  padding: 0.475rem 0.825rem;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+  max-width: 1400px;
+  min-height: 700px;
+  margin: 0 auto;
+}
+
+aside {
+  padding: 2rem 0 2rem 1rem;
+  background: #f8f8f8;
+}
+
+.profile {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.835rem;
+}
+
+hr {
+  border-color: #f8f8f8;
+  margin-top: 3rem;
+}
+
+.menu {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.main-content {
+  margin: 2rem;
+  max-height: 700px;
+  padding: 0.5rem 0.7rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem;
+  padding: 1rem 0;
+}
+
+#no-notes-message {
+  margin-top: 0.8rem;
+  padding-left: 0.5rem;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  max-width: 201px;
+  min-height: 177px;
+  padding: 1rem;
+  background: #f8f8f8;
+}
+
+a {
+  border-radius: 10px;
+  padding: 0.475rem 0.825rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.3s ease;
+}
+
+a:hover {
+  background: #e7e9eb;
+}
+
+.note-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6a90f3;
+  margin-top: 0.375rem;
+}
+
+.note-desc {
+  color: #33322e;
+  margin-top: 0.7rem;
+}
+
+input {
+  border-radius: 10px;
+  padding: 0.375rem 0.725rem;
+  border: 1px solid #e7e9eb;
+}
+
+select {
+  width: 200px;
+  padding: 0.375rem 0.725rem;
+  border: 1px solid #e7e9eb;
+  border-radius: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+option {
+  background-color: #fff;
+  color: #333;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: #6a90f3;
+  box-shadow: 0 0 0 0.2rem rgba(10, 127, 252, 0.25);
+}
+
+.delete {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  margin-top: 1.2rem;
+}
